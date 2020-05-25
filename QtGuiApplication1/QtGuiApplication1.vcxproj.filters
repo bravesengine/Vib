@@ -1,0 +1,638 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Device">
+      <UniqueIdentifier>{a04955ce-1b68-4ea2-9f83-2ba4564cbdf5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Device\Oculus">
+      <UniqueIdentifier>{6c6fe4a3-4d47-4d88-ba37-1dd959344fa0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Device\Oculus\OVR">
+      <UniqueIdentifier>{5a74870d-a256-4c01-8bb0-8ed3ce179e01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Device\Oculus\OVR\Extras">
+      <UniqueIdentifier>{5d4e57d7-0ed7-4f8b-bc38-73587c465a14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Device\Oculus\OVRKernel">
+      <UniqueIdentifier>{0b8da7fd-3b4c-4e3c-af9b-94812749c4a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Device\Oculus\OVRKernel\GL">
+      <UniqueIdentifier>{7bd53a50-fc9d-49ae-8214-6286fcdf1cfb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Device\Oculus\OVRKernel\Kernel">
+      <UniqueIdentifier>{140ba17c-4a4a-4546-96d7-2bc77d1beb96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Device\Oculus\OVRKernel\Tracing">
+      <UniqueIdentifier>{4bd269ab-6d1d-47e5-824e-1f8faa958bbb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Device\Oculus\OVRKernel\Util">
+      <UniqueIdentifier>{0ddb6c01-44bd-4747-8dba-3213ee9c53d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Device\Oculus\OVRKernel\Util\Shaders">
+      <UniqueIdentifier>{aa214edb-0c64-48ac-9587-2eaee75e1674}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Parser">
+      <UniqueIdentifier>{80386d50-3927-42a5-94b1-6fb35a03dda1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Parser\include">
+      <UniqueIdentifier>{dce4fe5c-29b2-47f6-9b6d-9879f5d74e0e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Parser\src">
+      <UniqueIdentifier>{ed0a029e-3509-4557-ac68-1e5f5c430f50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FIleSystem">
+      <UniqueIdentifier>{5a4ee0de-93cb-442e-b3ec-10934b907aed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rd">
+      <UniqueIdentifier>{1400a834-a559-4548-810a-6a8e492aa32f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rd\QXsdCode">
+      <UniqueIdentifier>{a5960168-0dc0-4eb7-ac10-d84520fdca28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rd\Sound">
+      <UniqueIdentifier>{abaf3847-7ec1-42f7-9983-c4e453f6a567}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Gui">
+      <UniqueIdentifier>{972bb1b4-b32c-4840-b80c-23429b650212}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="HapticPlotData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HapticPlotDataSelectAction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HapticPlotGraph.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HapticModifFunc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HapticPlotKeyAction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UndoCommands.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UndoDataTypes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Device\HapticDevice_Oculus.cpp">
+      <Filter>Device</Filter>
+    </ClCompile>
+    <ClCompile Include="Device\HapticDevice_Vive.cpp">
+      <Filter>Device</Filter>
+    </ClCompile>
+    <ClCompile Include="Device\HapticDevice_XboxPad.cpp">
+      <Filter>Device</Filter>
+    </ClCompile>
+    <ClCompile Include="Device\HapticIDevice.cpp">
+      <Filter>Device</Filter>
+    </ClCompile>
+    <ClCompile Include="Device\HapticDeviceState.cpp">
+      <Filter>Device</Filter>
+    </ClCompile>
+    <ClCompile Include="Device\HapticBufferClip.cpp">
+      <Filter>Device</Filter>
+    </ClCompile>
+    <ClCompile Include="Device\HapticDeviceManager.cpp">
+      <Filter>Device</Filter>
+    </ClCompile>
+    <ClCompile Include="Device\HapticBufferClip_Oculus.cpp">
+      <Filter>Device</Filter>
+    </ClCompile>
+    <ClCompile Include="Device\HapticDeviceCommand.cpp">
+      <Filter>Device</Filter>
+    </ClCompile>
+    <ClCompile Include="Device\HapticDeviceCommander.cpp">
+      <Filter>Device</Filter>
+    </ClCompile>
+    <ClCompile Include="Device\HapticClipResouce.cpp">
+      <Filter>Device</Filter>
+    </ClCompile>
+    <ClCompile Include="Parser\src\Functions.cpp">
+      <Filter>Parser\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Parser\src\Parser.cpp">
+      <Filter>Parser\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Parser\src\Sample.cpp">
+      <Filter>Parser\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Parser\src\Samples.cpp">
+      <Filter>Parser\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Parser\src\Schema.cpp">
+      <Filter>Parser\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Parser\SampleTableParser.cpp">
+      <Filter>Parser</Filter>
+    </ClCompile>
+    <ClCompile Include="Parser\TableManager.cpp">
+      <Filter>Parser</Filter>
+    </ClCompile>
+    <ClCompile Include="Parser\SampleDataLoader.cpp">
+      <Filter>Parser</Filter>
+    </ClCompile>
+    <ClCompile Include="FileSystem\BVF_Exporter.cpp">
+      <Filter>FIleSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="FileSystem\BVF_Importer.cpp">
+      <Filter>FIleSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound\wavfile.cpp">
+      <Filter>3rd\Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="ComboBoxDelegate.cpp">
+      <Filter>Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="DeviceSelectHud.cpp">
+      <Filter>Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="DeviceStateProgressHud.cpp">
+      <Filter>Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="HapticEditorMainToolBar.cpp">
+      <Filter>Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="HapticEditorPopupMenu.cpp">
+      <Filter>Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="HapticEditorToolBar.cpp">
+      <Filter>Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="HapticEditorWindowHud.cpp">
+      <Filter>Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="qcustomplot.cpp">
+      <Filter>Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="QToolButtonWacher.cpp">
+      <Filter>Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="QtHapticMain.cpp">
+      <Filter>Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="GenDocument.cpp">
+      <Filter>Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound\waveengine.cpp">
+      <Filter>3rd\Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound\wavebufferreader.cpp">
+      <Filter>3rd\Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="HapticPlotGraphCursor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qcustomplot_TracerExt.cpp">
+      <Filter>Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="FileSystem\WAVE_Importer.cpp">
+      <Filter>FIleSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="FileSystem\Json_Importer.cpp">
+      <Filter>FIleSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="FileSystem\HFS_Manager.cpp">
+      <Filter>FIleSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="FileSystem\Json_Exporter.cpp">
+      <Filter>FIleSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="FileSystem\WaveToHaptic.cpp">
+      <Filter>FIleSystem</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="HapticPlotDataSelectAction.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="HapticModifFunc.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Device\HapticDevice_Oculus.h">
+      <Filter>Device</Filter>
+    </QtMoc>
+    <QtMoc Include="Device\HapticDevice_Vive.h">
+      <Filter>Device</Filter>
+    </QtMoc>
+    <QtMoc Include="Device\HapticDevice_XboxPad.h">
+      <Filter>Device</Filter>
+    </QtMoc>
+    <QtMoc Include="Device\HapticDeviceManager.h">
+      <Filter>Device</Filter>
+    </QtMoc>
+    <QtMoc Include="Device\HapticIDevice.h">
+      <Filter>Device</Filter>
+    </QtMoc>
+    <QtMoc Include="Device\HapticDeviceState.h">
+      <Filter>Device</Filter>
+    </QtMoc>
+    <QtMoc Include="Device\HapticClipResouce.h">
+      <Filter>Device</Filter>
+    </QtMoc>
+    <QtMoc Include="Device\HapticDeviceCommand.h">
+      <Filter>Device</Filter>
+    </QtMoc>
+    <QtMoc Include="QXsdCode\include\xsdattribute.h">
+      <Filter>3rd\QXsdCode</Filter>
+    </QtMoc>
+    <QtMoc Include="QXsdCode\include\xsdobject.h">
+      <Filter>3rd\QXsdCode</Filter>
+    </QtMoc>
+    <QtMoc Include="Parser\include\Functions.h">
+      <Filter>Parser\include</Filter>
+    </QtMoc>
+    <QtMoc Include="Parser\include\Parser.h">
+      <Filter>Parser\include</Filter>
+    </QtMoc>
+    <QtMoc Include="Parser\include\Sample.h">
+      <Filter>Parser\include</Filter>
+    </QtMoc>
+    <QtMoc Include="Parser\include\Samples.h">
+      <Filter>Parser\include</Filter>
+    </QtMoc>
+    <QtMoc Include="Parser\include\Schema.h">
+      <Filter>Parser\include</Filter>
+    </QtMoc>
+    <QtMoc Include="Parser\SampleTableParser.h">
+      <Filter>Parser</Filter>
+    </QtMoc>
+    <QtMoc Include="Parser\TableManager.h">
+      <Filter>Parser</Filter>
+    </QtMoc>
+    <QtMoc Include="FileSystem\BVF_Exporter.h">
+      <Filter>FIleSystem</Filter>
+    </QtMoc>
+    <QtMoc Include="FileSystem\BVF_Importer.h">
+      <Filter>FIleSystem</Filter>
+    </QtMoc>
+    <QtMoc Include="HapticEditorWindowHud.h">
+      <Filter>Gui</Filter>
+    </QtMoc>
+    <QtMoc Include="HapticEditorToolBar.h">
+      <Filter>Gui</Filter>
+    </QtMoc>
+    <QtMoc Include="HapticEditorPopupMenu.h">
+      <Filter>Gui</Filter>
+    </QtMoc>
+    <QtMoc Include="HapticEditorMainToolBar.h">
+      <Filter>Gui</Filter>
+    </QtMoc>
+    <QtMoc Include="DeviceStateProgressHud.h">
+      <Filter>Gui</Filter>
+    </QtMoc>
+    <QtMoc Include="DeviceSelectHud.h">
+      <Filter>Gui</Filter>
+    </QtMoc>
+    <QtMoc Include="ComboBoxDelegate.h">
+      <Filter>Gui</Filter>
+    </QtMoc>
+    <QtMoc Include="QToolButtonWacher.h">
+      <Filter>Gui</Filter>
+    </QtMoc>
+    <QtMoc Include="QtHapticMain.h">
+      <Filter>Gui</Filter>
+    </QtMoc>
+    <QtMoc Include="qcustomplot.h">
+      <Filter>Gui</Filter>
+    </QtMoc>
+    <QtMoc Include="GenDocument.h">
+      <Filter>Gui</Filter>
+    </QtMoc>
+    <QtMoc Include="Sound\waveengine.h">
+      <Filter>3rd\Sound</Filter>
+    </QtMoc>
+    <QtMoc Include="Sound\wavebufferreader.h">
+      <Filter>3rd\Sound</Filter>
+    </QtMoc>
+    <QtMoc Include="HapticPlotGraphCursor.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qcustomplot_TracerExt.h">
+      <Filter>Gui</Filter>
+    </QtMoc>
+    <QtMoc Include="FileSystem\H_Exporter.h">
+      <Filter>FIleSystem</Filter>
+    </QtMoc>
+    <QtMoc Include="FileSystem\H_Importer.h">
+      <Filter>FIleSystem</Filter>
+    </QtMoc>
+    <QtMoc Include="FileSystem\WAVE_Importer.h">
+      <Filter>FIleSystem</Filter>
+    </QtMoc>
+    <QtMoc Include="FileSystem\Json_Importer.h">
+      <Filter>FIleSystem</Filter>
+    </QtMoc>
+    <QtMoc Include="FileSystem\HFS_Manager.h">
+      <Filter>FIleSystem</Filter>
+    </QtMoc>
+    <QtMoc Include="FileSystem\Json_Exporter.h">
+      <Filter>FIleSystem</Filter>
+    </QtMoc>
+    <QtMoc Include="FileSystem\WaveToHaptic.h">
+      <Filter>FIleSystem</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="QtHapticMain.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="HapticEditorHud.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="QtHapticMain.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="Device.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="DeviceStateProgress.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="GenDocument.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="HapticEditorSplit.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GeneratedFiles\ui_HapticEditorHud.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_QtHapticMain.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HapticPlotGraph.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="singleton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="call_once.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HapticPlotKeyAction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UndoCommands.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UndoDataTypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVR\Include\Extras\OVR_CAPI_Util.h">
+      <Filter>Device\Oculus\OVR\Extras</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVR\Include\Extras\OVR_Math.h">
+      <Filter>Device\Oculus\OVR\Extras</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVR\Include\Extras\OVR_StereoProjection.h">
+      <Filter>Device\Oculus\OVR\Extras</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVR\Include\OVR_CAPI.h">
+      <Filter>Device\Oculus\OVR</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVR\Include\OVR_CAPI_Audio.h">
+      <Filter>Device\Oculus\OVR</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVR\Include\OVR_CAPI_D3D.h">
+      <Filter>Device\Oculus\OVR</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVR\Include\OVR_CAPI_GL.h">
+      <Filter>Device\Oculus\OVR</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVR\Include\OVR_CAPI_Keys.h">
+      <Filter>Device\Oculus\OVR</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVR\Include\OVR_CAPI_Vk.h">
+      <Filter>Device\Oculus\OVR</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVR\Include\OVR_ErrorCode.h">
+      <Filter>Device\Oculus\OVR</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVR\Include\OVR_Version.h">
+      <Filter>Device\Oculus\OVR</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVRKernel\Src\GL\CAPI_GLE.h">
+      <Filter>Device\Oculus\OVRKernel\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVRKernel\Src\GL\CAPI_GLE_GL.h">
+      <Filter>Device\Oculus\OVRKernel\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVRKernel\Src\Kernel\OVR_Alg.h">
+      <Filter>Device\Oculus\OVRKernel\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVRKernel\Src\Kernel\OVR_Allocator.h">
+      <Filter>Device\Oculus\OVRKernel\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVRKernel\Src\Kernel\OVR_Array.h">
+      <Filter>Device\Oculus\OVRKernel\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVRKernel\Src\Kernel\OVR_Atomic.h">
+      <Filter>Device\Oculus\OVRKernel\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVRKernel\Src\Kernel\OVR_Callbacks.h">
+      <Filter>Device\Oculus\OVRKernel\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVRKernel\Src\Kernel\OVR_CallbacksInternal.h">
+      <Filter>Device\Oculus\OVRKernel\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVRKernel\Src\Kernel\OVR_Color.h">
+      <Filter>Device\Oculus\OVRKernel\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVRKernel\Src\Kernel\OVR_Compiler.h">
+      <Filter>Device\Oculus\OVRKernel\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVRKernel\Src\Kernel\OVR_ContainerAllocator.h">
+      <Filter>Device\Oculus\OVRKernel\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVRKernel\Src\Kernel\OVR_CRC32.h">
+      <Filter>Device\Oculus\OVRKernel\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVRKernel\Src\Kernel\OVR_DebugHelp.h">
+      <Filter>Device\Oculus\OVRKernel\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVRKernel\Src\Kernel\OVR_Delegates.h">
+      <Filter>Device\Oculus\OVRKernel\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVRKernel\Src\Kernel\OVR_Deque.h">
+      <Filter>Device\Oculus\OVRKernel\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVRKernel\Src\Kernel\OVR_Error.h">
+      <Filter>Device\Oculus\OVRKernel\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVRKernel\Src\Kernel\OVR_File.h">
+      <Filter>Device\Oculus\OVRKernel\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVRKernel\Src\Kernel\OVR_Hash.h">
+      <Filter>Device\Oculus\OVRKernel\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVRKernel\Src\Kernel\OVR_JSON.h">
+      <Filter>Device\Oculus\OVRKernel\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVRKernel\Src\Kernel\OVR_KeyCodes.h">
+      <Filter>Device\Oculus\OVRKernel\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVRKernel\Src\Kernel\OVR_List.h">
+      <Filter>Device\Oculus\OVRKernel\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVRKernel\Src\Kernel\OVR_Lockless.h">
+      <Filter>Device\Oculus\OVRKernel\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVRKernel\Src\Kernel\OVR_Log.h">
+      <Filter>Device\Oculus\OVRKernel\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVRKernel\Src\Kernel\OVR_mach_exc_OSX.h">
+      <Filter>Device\Oculus\OVRKernel\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVRKernel\Src\Kernel\OVR_Nullptr.h">
+      <Filter>Device\Oculus\OVRKernel\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVRKernel\Src\Kernel\OVR_Rand.h">
+      <Filter>Device\Oculus\OVRKernel\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVRKernel\Src\Kernel\OVR_RefCount.h">
+      <Filter>Device\Oculus\OVRKernel\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVRKernel\Src\Kernel\OVR_SharedMemory.h">
+      <Filter>Device\Oculus\OVRKernel\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVRKernel\Src\Kernel\OVR_Std.h">
+      <Filter>Device\Oculus\OVRKernel\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVRKernel\Src\Kernel\OVR_String.h">
+      <Filter>Device\Oculus\OVRKernel\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVRKernel\Src\Kernel\OVR_StringHash.h">
+      <Filter>Device\Oculus\OVRKernel\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVRKernel\Src\Kernel\OVR_SysFile.h">
+      <Filter>Device\Oculus\OVRKernel\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVRKernel\Src\Kernel\OVR_System.h">
+      <Filter>Device\Oculus\OVRKernel\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVRKernel\Src\Kernel\OVR_Threads.h">
+      <Filter>Device\Oculus\OVRKernel\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVRKernel\Src\Kernel\OVR_Timer.h">
+      <Filter>Device\Oculus\OVRKernel\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVRKernel\Src\Kernel\OVR_Types.h">
+      <Filter>Device\Oculus\OVRKernel\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVRKernel\Src\Kernel\OVR_UTF8Util.h">
+      <Filter>Device\Oculus\OVRKernel\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVRKernel\Src\Kernel\OVR_Win32_IncludeWindows.h">
+      <Filter>Device\Oculus\OVRKernel\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVRKernel\Src\Kernel\WindowsAFunctions.h">
+      <Filter>Device\Oculus\OVRKernel\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVRKernel\Src\Tracing\LibOVREvents.h">
+      <Filter>Device\Oculus\OVRKernel\Tracing</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVRKernel\Src\Tracing\Tracing.h">
+      <Filter>Device\Oculus\OVRKernel\Tracing</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVRKernel\Src\Util\Util_D3D11_Blitter.h">
+      <Filter>Device\Oculus\OVRKernel\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVRKernel\Src\Util\Util_Direct3D.h">
+      <Filter>Device\Oculus\OVRKernel\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVRKernel\Src\Util\Util_GL_Blitter.h">
+      <Filter>Device\Oculus\OVRKernel\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVRKernel\Src\Util\Util_ImageWindow.h">
+      <Filter>Device\Oculus\OVRKernel\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVRKernel\Src\Util\Util_LongPollThread.h">
+      <Filter>Device\Oculus\OVRKernel\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVRKernel\Src\Util\Util_SystemGUI.h">
+      <Filter>Device\Oculus\OVRKernel\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVRKernel\Src\Util\Util_SystemInfo.h">
+      <Filter>Device\Oculus\OVRKernel\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\PlugIn\oculus\LibOVRKernel\Src\Util\Util_Watchdog.h">
+      <Filter>Device\Oculus\OVRKernel\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\HapticBufferClip.h">
+      <Filter>Device</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\HT_GlobalTypes.h">
+      <Filter>Device</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\HapticBufferClip_Oculus.h">
+      <Filter>Device</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\HapticDeviceCommander.h">
+      <Filter>Device</Filter>
+    </ClInclude>
+    <ClInclude Include="MessageHandle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QXsdCode\include\handler.h">
+      <Filter>3rd\QXsdCode</Filter>
+    </ClInclude>
+    <ClInclude Include="Parser\SampleDataLoader.h">
+      <Filter>Parser</Filter>
+    </ClInclude>
+    <ClInclude Include="Sound\wavfile.h">
+      <Filter>3rd\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="HapticPlotData.h">
+      <Filter>Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_HapticEditorSplit.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Sound\Int24.h">
+      <Filter>3rd\Sound</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Device\PlugIn\oculus\LibOVRKernel\Src\Kernel\OVR_NewOverride.inl">
+      <Filter>Device\Oculus\OVRKernel\Kernel</Filter>
+    </None>
+  </ItemGroup>
+</Project>

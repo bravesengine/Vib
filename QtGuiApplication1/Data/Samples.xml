@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Samples xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Sample MaxRepeat="10" MinRepeat="1" Desc="asdfwefdasf" Data="255, 255, 255, 255,255,255,255,255,255,255" DefaultRepeat="3" Title="320Hz, full amplitude"/>
+	<Sample MaxRepeat="10" MinRepeat="1" Desc="wefwefwef" Data="255, 0, 255, 0, 255, 0, 255, 0,255, 0, 255, 0, 255, 0, 255, 0," DefaultRepeat="3" Title="160Hz, full amplitude"/>
+	<Sample MaxRepeat="10" MinRepeat="1" Desc="어쩌그 저쩌구" Data="127, 127, 127,127, 127, 127,127, 127, 127,127" DefaultRepeat="3" Title="320Hz, half amplitude"/>
+	<Sample MaxRepeat="10" MinRepeat="1" Desc="ㅁㄴㅇㄻㄴㅇㄻㄴㅇㄹ" Data="0, 0, 255, 255, 255, 0, 0" DefaultRepeat="3" Title="Single sharp tick (320Hz)"/>
+	<Sample MaxRepeat="10" MinRepeat="1" Desc="머시라고" Data="0, 255, 0, 255, 0, 255, 0" DefaultRepeat="1" Title="Single blunt tick (160Hz)"/>	
+</Samples>

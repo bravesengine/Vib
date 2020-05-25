@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HapticEditor", "QtGuiApplication1\QtGuiApplication1.vcxproj", "{B12702AD-ABFB-343A-A199-8E24837244A3}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IWindows_XInput_Example", "D:\XInput-With-Qt-master\XInput-With-Qt-master\IWindows_XInput_Example\IWindows_XInput_Example.vcxproj", "{B575E539-04FC-3647-AD3C-8EB9726B1989}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "plot-examples", "QtSamples\qcustomplot\examples\plots\plot-examples.vcxproj", "{F8857C4F-4B3B-3705-B6E9-8593D851DD2E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QXlsx", "QXlsx\QXlsx.vcxproj", "{3DD69D67-9E5F-3B8E-95B9-729E99486107}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VibraionForge", "..\..\QtVibrationTool\VibraionForge\VibraionForge.vcxproj", "{099C68FC-C1C0-3CCE-9840-5BFDAF1CED20}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B12702AD-ABFB-343A-A199-8E24837244A3}.Debug|x64.ActiveCfg = Debug|x64
+		{B12702AD-ABFB-343A-A199-8E24837244A3}.Debug|x64.Build.0 = Debug|x64
+		{B12702AD-ABFB-343A-A199-8E24837244A3}.Release|x64.ActiveCfg = Release|x64
+		{B12702AD-ABFB-343A-A199-8E24837244A3}.Release|x64.Build.0 = Release|x64
+		{B575E539-04FC-3647-AD3C-8EB9726B1989}.Debug|x64.ActiveCfg = Debug|x64
+		{B575E539-04FC-3647-AD3C-8EB9726B1989}.Debug|x64.Build.0 = Debug|x64
+		{B575E539-04FC-3647-AD3C-8EB9726B1989}.Release|x64.ActiveCfg = Release|x64
+		{B575E539-04FC-3647-AD3C-8EB9726B1989}.Release|x64.Build.0 = Release|x64
+		{F8857C4F-4B3B-3705-B6E9-8593D851DD2E}.Debug|x64.ActiveCfg = Debug|x64
+		{F8857C4F-4B3B-3705-B6E9-8593D851DD2E}.Debug|x64.Build.0 = Debug|x64
+		{F8857C4F-4B3B-3705-B6E9-8593D851DD2E}.Release|x64.ActiveCfg = Release|x64
+		{F8857C4F-4B3B-3705-B6E9-8593D851DD2E}.Release|x64.Build.0 = Release|x64
+		{3DD69D67-9E5F-3B8E-95B9-729E99486107}.Debug|x64.ActiveCfg = Debug|x64
+		{3DD69D67-9E5F-3B8E-95B9-729E99486107}.Debug|x64.Build.0 = Debug|x64
+		{3DD69D67-9E5F-3B8E-95B9-729E99486107}.Release|x64.ActiveCfg = Release|x64
+		{3DD69D67-9E5F-3B8E-95B9-729E99486107}.Release|x64.Build.0 = Release|x64
+		{099C68FC-C1C0-3CCE-9840-5BFDAF1CED20}.Debug|x64.ActiveCfg = Debug|x64
+		{099C68FC-C1C0-3CCE-9840-5BFDAF1CED20}.Debug|x64.Build.0 = Debug|x64
+		{099C68FC-C1C0-3CCE-9840-5BFDAF1CED20}.Release|x64.ActiveCfg = Release|x64
+		{099C68FC-C1C0-3CCE-9840-5BFDAF1CED20}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7F68E59B-9AED-4D73-B2AF-BCA53758D1C0}
+	EndGlobalSection
+EndGlobal

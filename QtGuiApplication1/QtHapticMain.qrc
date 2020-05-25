@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/QtHapticMain">
+        <file>Resources/Play.png</file>
+        <file>Resources/Stop.png</file>
+        <file>Resources/Amp_Dw.png</file>
+        <file>Resources/Amp_Up.png</file>
+        <file>Resources/Hz_Dw.png</file>
+        <file>Resources/Hz_Up.png</file>
+        <file>Resources/ReDo.png</file>
+        <file>Resources/UnDo.png</file>
+        <file>Resources/GamePad.png</file>
+        <file>Resources/TouchLeft.png</file>
+        <file>Resources/TouchRight.png</file>
+        <file>Resources/connect.png</file>
+        <file>Resources/disconnect.png</file>
+    </qresource>
+</RCC>
