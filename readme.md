@@ -22,5 +22,6 @@
 
 # License
  본 프로그램은 GPLv3 라이선스의 보호를 받습니다. 
+ 
  This licese is protected by GPLv3 License.
 
