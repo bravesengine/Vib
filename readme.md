@@ -29,7 +29,7 @@
 * Index
 　This project is based on Oculus Rift device. Interstingly, Oculus Rift has buffered haptic on their controller vibration logic. 
 　If user use buffered haptic function properly, user can create various vibration data and use that on their contents. But there is one minor problem that user need to input 0-255 number data to tool. 
-　Usually, a lot of user uses unity's auto converting tools which unity provides, but that tools doesn't support modifying function or function to create vibration data without sound file. we are working on those problems with this project. 
+　Usually, a lot of Oculuse rift user uses unity's auto converting tools which unity provides, but that tools doesn't support modifying function or function to create vibration data without sound file. we are working on those problems with this project. 
 
 
 * Tools which we used
