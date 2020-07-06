@@ -37,7 +37,7 @@
     * Used Opensource QT to UI frames    
      * Used Qcustomplot for visualize graph movements 
 
-# Manul
+# Manual
 * Basic operation
 　Before start to use our project, you need to install Oculus rift default programs and setup devices. 
 　Run this project will initiate oculus rift default program and HDM function will be turned "ON". You don't need to wear HMD while you use this project. Just cover HDM's inner sensor with textile or clothes. 
