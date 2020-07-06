@@ -35,7 +35,7 @@
 * Tools which we used
     * Visual Studio C++     
     * Used Opensource QT to UI frames    
-     * Used Qcustomplot for visualize graph movements 
+     * Used Qcustomplot for visualize chart movements 
 
 # Manual
 * Basic operation
