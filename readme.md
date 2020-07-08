@@ -20,6 +20,9 @@
 * 상세 사용법
  본 사용법은 나중에 위키 페이지 등을 통해 상세한 매뉴얼을 만들어 제공해 드리도록 하겠습니다. 기본 동작 로직은 과거 사용되어 온 에디터들과 동일하게 구성하였으므로 크게 사용 상에 어려움은 없을 것입니다.
 
+# 커뮤니티
+　Git Issue
+
 # License
  본 프로그램은 GPLv3 라이선스의 보호를 받습니다. 
  
@@ -46,6 +49,9 @@
 
 * Detailed Manaual 
 This manual for tools will be published with Wiki pages. This tools uses default logic which is popular with other tools, so we think there should be no problem at all. 
+
+# Community
+　Git Issue
 
 # License
  This licese is protected by GPLv3 License.
