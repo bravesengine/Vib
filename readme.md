@@ -46,7 +46,7 @@
         - Confirmed compatibility with Qt 5.12.9 (Download for Opensource user)
      * Requires to download Qt tool for VS 2017 for Visual Studio setting (Based on Visual studio version)
      * Used Qtustomplot for chart movements. 
-    * Tested with Oculus SDK 1.30.0
+     * Tested with Oculus SDK 1.30.0
 
 # Manual
 * Basic operation
