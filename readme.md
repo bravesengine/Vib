@@ -39,11 +39,14 @@
 　If user use buffered haptic function properly, user can create various vibration data and use that on their contents. But there is one minor problem that user need to input 0-255 number data to tool. 
 　Usually, a lot of Oculuse rift user uses unity's auto converting tools which unity provides, but that tools doesn't support modifying function or function to create vibration data without sound file. we are working on those problems with this project. 
 
-
-* Tools which we used
-    * Visual Studio C++     
-    * Used Opensource QT to UI frames    
-     * Used Qcustomplot for visualize chart movements 
+* Version information for developing tools
+    * Visual Studio C++ 2017 or above
+    * Used Opensource project Qt for creating UI frame: 
+        - Used Qt version 5.11.1 for developing
+        - Confirmed compatibility with Qt 5.12.9 (Download for Opensource user)
+     * Requires to download Qt tool for VS 2017 for Visual Studio setting (Based on Visual studio version)
+     * Used Qtustomplot for chart movements. 
+    * Tested with Oculus SDK 1.30.0
 
 # Manual
 * Basic operation
