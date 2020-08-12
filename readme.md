@@ -6,12 +6,18 @@
 　
 　
 * 활용툴 버전 정보
-    * 비주얼 스튜디오 C++ 2017 혹은 그 이상 버전     
+    * 비주얼 스튜디오 C++ 2017 혹은 그 이상 버전   
+      https://docs.microsoft.com/ko-kr/visualstudio/productinfo/installing-an-earlier-release-of-vs2017  
+      
     * UI를 적용한 전체 프레임을 구성하기 위해 오픈소스 중 Qt를 이용 
       : 
         - Qt버전 5.11.1 에서 작업 
         - Qt 5.12.9 동작확인 (Download for Opensource user)
+        https://www.qt.io/download  
+        
      * 비주얼 스튜디오 설정을 위해 Qt tool for VS 2017 다운로드 필요 (비주얼 스튜디오 버전에 맞게 선택)
+      https://marketplace.visualstudio.com/items?itemName=TheQtCompany.QtVisualStudioTools-19123  
+     
      * 그래프 움직임 적용에 Qtustomplot 적용 
     * Oculus SDK 1.30.0 에서 테스트
 
