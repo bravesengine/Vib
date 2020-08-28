@@ -7,10 +7,7 @@ public class HapticManager : MonoBehaviour
     public OVRHapticsClip clip;
 
     public byte[] bytes;
-
     public string byteString;
-
-
  
     private void OnEnable()
     {
