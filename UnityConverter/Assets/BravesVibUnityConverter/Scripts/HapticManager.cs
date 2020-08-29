@@ -8,7 +8,9 @@ public class HapticManager : MonoBehaviour
 
     public byte[] bytes;
     public string byteString;
- 
+
+    private int index;
+
     private void OnEnable()
     {
         bytes = System.Text.Encoding.UTF8.GetBytes(byteString);
@@ -17,6 +19,8 @@ public class HapticManager : MonoBehaviour
 
         clip = new OVRHapticsClip(bytes, bytes.Length);
         Debug.Log("clip is *" +  clip + "*******");
+
+        index = 0;
     }
 
 
@@ -26,7 +30,20 @@ public class HapticManager : MonoBehaviour
 		if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger))
 		{
             Debug.Log("IndexTrigger down");
-            OVRHaptics.RightChannel.Mix(clip);
+
+            string key = "VibSample1";
+            switch (index)
+            {
+                case 0 : key = "VibSample1"; break;
+                case 1 : key = "VibSample2"; break;
+                case 2 : key = "VibSample3"; break;
+            }
+
+            index ++;
+            if (index == 3)
+                index = 0;
+                
+            OVRHaptics.RightChannel.Mix(VibManager.vibDictionary[key]);
 		}
     }
 
