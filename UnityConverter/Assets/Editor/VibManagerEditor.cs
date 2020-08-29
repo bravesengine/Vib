@@ -4,9 +4,20 @@ using UnityEngine;
 using UnityEditor;
 
 [CustomEditor(typeof(VibManager))]
-public class VibManagerEditor : MonoBehaviour
+public class VibManagerEditor : Editor
 {
-    
+    VibManager vibManager;
+
+    private void OnEnable()
+    {
+        vibManager = (VibManager)target;
+    }
+
+    public override void OnInspectorGUI()
+    {
+        DrawDefaultInspector();
+
+    }
 
 
 

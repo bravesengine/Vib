@@ -170,10 +170,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a46d86167557d748a825746c303f209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vibDataFiles:
-  - {fileID: 4900000, guid: e07ce7bc4c8ab4745af492263efa51f4, type: 3}
-  - {fileID: 4900000, guid: 189f50694905f494fb3f78bb6783e357, type: 3}
-  - {fileID: 4900000, guid: 81b0158f68bffec49a82094ac5f9a6a9, type: 3}
 --- !u!1 &986355118
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,7 +15,6 @@ public class VibManager : MonoBehaviour
     }
 
     public static VibManager instance; 
-    public TextAsset[] vibDataFiles;
     public static Dictionary<string, OVRHapticsClip>  vibDictionary;
 
     private void Awake()
@@ -36,6 +35,10 @@ public class VibManager : MonoBehaviour
     //Read RawData from each json files in vibDataFiles array and add those data to vibDictionary
     private void ReadVibDataFromJson()
     {
+        TextAsset[] vibDataFiles = Resources.LoadAll<TextAsset>("VibData");
+
+
+
         vibDictionary = new Dictionary<string, OVRHapticsClip>();
 
         for(int _i = 0 ; _i < vibDataFiles.Length ; _i ++)
