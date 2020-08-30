@@ -33,6 +33,8 @@ public class VibManagerEditor : Editor
         EditorGUILayout.Space();
 
         GUILayout.BeginHorizontal();
+
+            //select and check enumerized keys
             selectedKey = (VibKey) EditorGUILayout.EnumPopup("VibKey", selectedKey);
 
             if(GUILayout.Button("Test"))
@@ -49,6 +51,7 @@ public class VibManagerEditor : Editor
         EditorGUILayout.Space();
         EditorGUILayout.Space();
 
+        //reset keys in enum by reading json files in VibData folder
         if(GUILayout.Button("Refresh Vibkey"))
         {
             EnumerizeKeys();
