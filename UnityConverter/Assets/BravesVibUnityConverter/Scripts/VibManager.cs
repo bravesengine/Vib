@@ -37,7 +37,6 @@ public class VibManager : MonoBehaviour
     private void ReadVibDataFromJson()
     {
         TextAsset[] vibDataFiles = Resources.LoadAll<TextAsset>("VibData");
-        EnumerizeKeys(vibDataFiles);
 
         vibDictionary = new Dictionary<string, OVRHapticsClip>();
 
