@@ -17,6 +17,7 @@ public class VibManager : MonoBehaviour
 
     public static VibManager instance; 
     public static Dictionary<VibKey, OVRHapticsClip>  vibDictionary;
+    public static VibKey testKey = (VibKey) 0;
 
     private void Awake()
     {

@@ -19,7 +19,7 @@ public class VibManagerEditor : Editor
 
 
     VibManager vibManager;
-    VibKey selectedKey = (VibKey) 0;
+    public VibKey selectedKey = (VibKey) 0;
 
     private void OnEnable()
     {
@@ -36,6 +36,7 @@ public class VibManagerEditor : Editor
 
             //select and check enumerized keys
             selectedKey = (VibKey) EditorGUILayout.EnumPopup("VibKey", selectedKey);
+            VibManager.testKey = selectedKey;
 
             if(GUILayout.Button("Test"))
             {
