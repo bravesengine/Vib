@@ -19,17 +19,37 @@ public class VibManagerEditor : Editor
 
 
     VibManager vibManager;
+    VibKey selectedKey = (VibKey) 0;
 
     private void OnEnable()
     {
         vibManager = (VibManager)target;
+
     }
 
     public override void OnInspectorGUI()
     {
-        EditorGUILayout.EnumPopup("Keys", VibKeys.VibSample1);
-        
-        if(GUILayout.Button("Refresh vibration keys"))
+        EditorGUILayout.Space();
+        EditorGUILayout.Space();
+
+        GUILayout.BeginHorizontal();
+            selectedKey = (VibKey) EditorGUILayout.EnumPopup("VibKey", selectedKey);
+
+            if(GUILayout.Button("Test"))
+            {
+                TestVibration();
+            }
+        GUILayout.EndHorizontal();
+
+        EditorGUILayout.Space();
+
+        EditorGUILayout.HelpBox("Test works on runtime only", MessageType.Warning);
+        EditorGUILayout.HelpBox("Usage : OVRHaptics.LeftChannel.Mix(VibManager.vibDictionary[Vibkey.VibSample1]);", MessageType.Info);
+
+        EditorGUILayout.Space();
+        EditorGUILayout.Space();
+
+        if(GUILayout.Button("Refresh Vibkey"))
         {
             EnumerizeKeys();
         }
@@ -40,7 +60,7 @@ public class VibManagerEditor : Editor
     {
         TextAsset[] _vibDataFiles = Resources.LoadAll<TextAsset>("VibData");
 
-        string enumTitle = "VibKeys";                   
+        string enumTitle = "VibKey";                   
         List<string> enumEntries = new List<string>();                  //add vibdata names to string list to enumerize them
         for(int _i = 0 ; _i < _vibDataFiles.Length ; _i ++)
         {        
@@ -61,7 +81,11 @@ public class VibManagerEditor : Editor
         UnityEditor.AssetDatabase.Refresh();
     }
 
-
+    private void TestVibration()
+    {
+        OVRHaptics.RightChannel.Mix(VibManager.vibDictionary[selectedKey]);
+        OVRHaptics.LeftChannel.Mix(VibManager.vibDictionary[selectedKey]);
+    }
 
 
 }

@@ -31,19 +31,19 @@ public class HapticManager : MonoBehaviour
 		{
             Debug.Log("IndexTrigger down");
 
-            string key = "VibSample1";
+            VibKey key = VibKey.VibSample1;
             switch (index)
             {
-                case 0 : key = "VibSample1"; break;
-                case 1 : key = "VibSample2"; break;
-                case 2 : key = "VibSample3"; break;
+                case 0 : key = VibKey.VibSample1; break;
+                case 1 : key = VibKey.VibSample2; break;
+                case 2 : key = VibKey.VibSample3; break;
             }
 
             index ++;
             if (index == 3)
                 index = 0;
                 
-            OVRHaptics.RightChannel.Mix(VibManager.vibDictionary[key]);
+            OVRHaptics.LeftChannel.Mix(VibManager.vibDictionary[key]);
 		}
     }
 

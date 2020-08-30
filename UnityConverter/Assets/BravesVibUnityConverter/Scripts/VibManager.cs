@@ -16,7 +16,7 @@ public class VibManager : MonoBehaviour
     }
 
     public static VibManager instance; 
-    public static Dictionary<string, OVRHapticsClip>  vibDictionary;
+    public static Dictionary<VibKey, OVRHapticsClip>  vibDictionary;
 
     private void Awake()
     {
@@ -38,44 +38,19 @@ public class VibManager : MonoBehaviour
     {
         TextAsset[] vibDataFiles = Resources.LoadAll<TextAsset>("VibData");
 
-        vibDictionary = new Dictionary<string, OVRHapticsClip>();
+        vibDictionary = new Dictionary<VibKey, OVRHapticsClip>();
 
         for(int _i = 0 ; _i < vibDataFiles.Length ; _i ++)
         {
             VibDataContent vibDataContent = JsonUtility.FromJson<VibDataContent>(vibDataFiles[_i].ToString());  //parse json
             byte[] _bytes = StringToByte(vibDataContent.RawData);              //convert rawdata to byte array
             OVRHapticsClip _clip = new OVRHapticsClip(_bytes, _bytes.Length);
-            vibDictionary.Add(vibDataFiles[_i].name, _clip);               //add these data sets to dictionary
+            VibKey _key =(VibKey) System.Enum.Parse(typeof(VibKey), vibDataFiles[_i].name);
+            vibDictionary.Add(_key, _clip);               //add these data sets to dictionary
         }
 
         
     }
-
-
-    private void EnumerizeKeys(TextAsset[] _vibDataFiles)
-    {
-        string enumTitle = "VibKeys";                   
-        List<string> enumEntries = new List<string>();                  //add vibdata names to string list to enumerize them
-        for(int _i = 0 ; _i < _vibDataFiles.Length ; _i ++)
-        {        
-            enumEntries.Add(_vibDataFiles[_i].name);
-        }
-
-        using (StreamWriter streamWriter = new StreamWriter("Assets/BravesVibUnityConverter/Scripts/" + enumTitle + ".cs"))
-        {
-            streamWriter.WriteLine("public enum " + enumTitle);
-            streamWriter.WriteLine("{");
-            for(int _i = 0 ; _i < enumEntries.Count ; _i++)
-            {
-                streamWriter.WriteLine("\t" + enumEntries[_i] + ",");
-            }
-            streamWriter.WriteLine("}");
-        }
-
-        UnityEditor.AssetDatabase.Refresh();
-    }
-
-
 
     // String to byte array
     private byte[] StringToByte(string str)

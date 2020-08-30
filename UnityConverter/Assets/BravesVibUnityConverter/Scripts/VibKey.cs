@@ -1,4 +1,4 @@
-public enum VibKeys
+public enum VibKey
 {
 	VibSample1,
 	VibSample2,
