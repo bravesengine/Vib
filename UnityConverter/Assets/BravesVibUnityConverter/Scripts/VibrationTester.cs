@@ -13,6 +13,9 @@ public class VibrationTester : MonoBehaviour
 		if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger))
 		{
             
+
+
+
             string[] strigns = _str.Split(',');
             byte[] bytes = new byte[strigns.Length];
             for(int i = 0; i < strigns.Length; i++)
