@@ -44,13 +44,18 @@ public class VibManager : MonoBehaviour
         for(int _i = 0 ; _i < vibDataFiles.Length ; _i ++)
         {
             VibDataContent vibDataContent = JsonUtility.FromJson<VibDataContent>(vibDataFiles[_i].ToString());  //parse json
-            byte[] _bytes = StringToByte(vibDataContent.RawData);              //convert rawdata to byte array
+            string[] strigns = vibDataContent.RawData.Split(',');
+            byte[] _bytes = new byte[strigns.Length];             //convert rawdata to byte array
+            for(int i = 0; i < strigns.Length; i++)
+            {
+                Debug.Log(int.Parse(strigns[i]) + "  " + System.Convert.ToByte(int.Parse(strigns[i])));
+                _bytes[i] = System.Convert.ToByte(int.Parse(strigns[i]));
+            }
+
             OVRHapticsClip _clip = new OVRHapticsClip(_bytes, _bytes.Length);
             VibKey _key =(VibKey) System.Enum.Parse(typeof(VibKey), vibDataFiles[_i].name);
             vibDictionary.Add(_key, _clip);               //add these data sets to dictionary
-        }
-
-        
+        }        
     }
 
     // String to byte array
