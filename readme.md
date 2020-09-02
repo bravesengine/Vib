@@ -31,8 +31,23 @@
 * 상세 사용법
  본 사용법은 나중에 위키 페이지 등을 통해 상세한 매뉴얼을 만들어 제공해 드리도록 하겠습니다. 기본 동작 로직은 과거 사용되어 온 에디터들과 동일하게 구성하였으므로 크게 사용 상에 어려움은 없을 것입니다.
 
+# 개발 진행 내용
+ * 햅틱 사인파 곡선 생성 
+    터치 오큘러스가 제공하는 기본 Hz와 진폭값 0~255를 기준으로 사인파 그래픽 생성 화면 개발. 
+
+ * 사운드 파일 곡선 생성 
+     VibeController(AudioClip clip)을 통해 사운드 파일을 받아들인 후 그 값을 분석하여 진동 사인파 그래픽으로 변환하는 루틴 개발. 
+
+ * 진동값 컨트롤러 적용 및 엔진 내 테스트 
+     ovr_SubmitControllerVibration을 통해 미리 만들어진 진동값을 터치 컨트롤러에 전송하여 테스트. 테스트 진행 과정에 필수 고려 기능 값을 미리 적용. 
+
+
+# 상세 설명
+   Wiki 페이지 참조
+ 
+
 # 커뮤니티
-　Git Issue 참고
+　 Git Issue 참고
 
 # License
  본 프로그램은 GPLv3 라이선스의 보호를 받습니다. 
@@ -64,8 +79,24 @@
 * Detailed Manaual 
 This manual for tools will be published with Wiki pages. This tools uses default logic which is popular with other tools, so we think there should be no problem at all. 
 
+# Development feature
+
+* Creating Haptic Sine Graph
+   Developing Sine graph creation window which based on default HZ and Amplitude value 0~255 of Oculus TOUCH. 
+
+* Creating Sound file graph
+    With VibeController(AudioClip clip), import sound files and transform that sound file to Sine graph which contain vibration data.  
+
+* Testing vibration data with controller 
+    With ovr_SubmitControllerVibration , send pre-created vibration datato controller, then test with controller.  
+
+
+
+# Detailed Description
+  refer to Wiki page 
+ 
 # Community
-　Git Issue
+　refer to Git Issue
 
 # License
  This licese is protected by GPLv3 License.
