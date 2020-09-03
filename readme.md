@@ -50,9 +50,15 @@
 　 Git Issue 참고
 
 # License
- 본 프로그램은 GPLv3 라이선스의 보호를 받습니다. 
+ 본 프로그램은 GPLv3 라이선스의 보호를 받습니다.  
+    
+    
+    
  
- 
+   
+----------------------------------------------------  
+
+
  
 # About Developing tools for VR Haptic vibration
 * Index  
