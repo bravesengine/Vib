@@ -61,12 +61,20 @@ public class VibManager : MonoBehaviour
     // String to byte array
     private byte[] StringToByte(string str)
     {
-        byte[] StrByte = System.Text.Encoding.UTF8.GetBytes(str);
-        string returnStr = System.Text.Encoding.Default.GetString(StrByte);
+        string[] strigns = str.Split(',');
 
-        Debug.Log(returnStr);
+        byte[] bytes = new byte[strigns.Length];             //convert rawdata to byte array
+        for(int i = 0; i < strigns.Length; i++)
+        {
+            bytes[i] = System.Convert.ToByte(int.Parse(strigns[i]));
+        }
 
-        return StrByte;
+        //byte[] StrByte = System.Text.Encoding.UTF8.GetBytes(str);
+        //string returnStr = System.Text.Encoding.Default.GetString(StrByte);
+
+        Debug.Log(bytes);
+
+        return bytes;
     }
 
     // byte array to string
