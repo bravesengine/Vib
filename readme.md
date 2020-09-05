@@ -41,6 +41,10 @@
  * 진동값 컨트롤러 적용 및 엔진 내 테스트 
      ovr_SubmitControllerVibration을 통해 미리 만들어진 진동값을 터치 컨트롤러에 전송하여 테스트. 테스트 진행 과정에 필수 고려 기능 값을 미리 적용. 
 
+# 키 설명
+<div>
+<img src="https://user-images.githubusercontent.com/67143783/92304603-7d197f80-efba-11ea-8926-ed61ca71d65f.png" width="90%"></img>   
+</div>
 
 # 상세 설명
    [Wiki 페이지 참조](https://github.com/bravesengine/Vib/wiki)
