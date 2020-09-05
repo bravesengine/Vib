@@ -43,7 +43,7 @@
 
 # 키 설명
 <div>
-<img src="https://user-images.githubusercontent.com/67143783/92304603-7d197f80-efba-11ea-8926-ed61ca71d65f.png" width="90%"></img>   
+<img src="https://user-images.githubusercontent.com/67143783/92304885-134ea500-efbd-11ea-9f9b-dc871e5f77d7.png" width="90%"></img>   
 </div>
 
 # 상세 설명
