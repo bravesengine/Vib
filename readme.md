@@ -46,12 +46,13 @@
 <img src="https://user-images.githubusercontent.com/67143783/92304973-d3d48880-efbd-11ea-89e0-9b8cba9a0309.png" width="90%"></img>   
 </div>
 
+  
 # 상세 설명
-   [Wiki 페이지 참조](https://github.com/bravesengine/Vib/wiki)
+ [Wiki 페이지 참조](https://github.com/bravesengine/Vib/wiki)
  
 
 # 커뮤니티
-　 Git Issue 참고
+　 [Git Issue 참고](https://github.com/bravesengine/Vib/issues)
 
 # License
  본 프로그램은 GPLv3 라이선스의 보호를 받습니다.  
@@ -106,7 +107,7 @@ This manual for tools will be published with Wiki pages. This tools uses default
    [refer to Wiki page](https://github.com/bravesengine/Vib/wiki)
  
 # Community
-　refer to Git Issue
+　 [refer to Git Issue](https://github.com/bravesengine/Vib/issues)
 
 # License
  This licese is protected by GPLv3 License.
