@@ -12,19 +12,21 @@ public class VibrationTester : MonoBehaviour
         //index trigger down
 		if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger))
 		{
+            /*
+            //forDev test with _str
             string[] strigns = _str.Split(',');
             byte[] bytes = new byte[strigns.Length];
             for(int i = 0; i < strigns.Length; i++)
             {
-                Debug.Log(int.Parse(strigns[i]) + "  " + System.Convert.ToByte(int.Parse(strigns[i])));
                 bytes[i] = System.Convert.ToByte(int.Parse(strigns[i]));
             }
 
 
             OVRHapticsClip _clip = new OVRHapticsClip(bytes, bytes.Length);
             OVRHaptics.LeftChannel.Mix(_clip);
+            */
 
-            //OVRHaptics.LeftChannel.Mix(VibManager.vibDictionary[VibManager.testKey]);
+            OVRHaptics.LeftChannel.Mix(VibManager.vibDictionary[VibManager.testKey]);
 		}
 		if (OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger))
 		{
