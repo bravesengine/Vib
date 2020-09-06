@@ -31,13 +31,7 @@ public class HapticManager : MonoBehaviour
 		{
             Debug.Log("IndexTrigger down");
 
-            VibKey key = VibKey.VibSample1;
-            switch (index)
-            {
-                case 0 : key = VibKey.VibSample1; break;
-                case 1 : key = VibKey.VibSample2; break;
-                case 2 : key = VibKey.VibSample3; break;
-            }
+            VibKey key = (VibKey) index;
 
             index ++;
             if (index == 3)
