@@ -33,6 +33,7 @@ public class VibManager : MonoBehaviour
     {
         vibDictionary = new Dictionary<VibKey, OVRHapticsClip>();
         ReadVibDataFromJson();
+        ReadVibDataFromAudioClips();
     }
 
 
