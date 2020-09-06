@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using System.Text.RegularExpressions;
 
 public class VibManager : MonoBehaviour
 {
@@ -30,6 +31,7 @@ public class VibManager : MonoBehaviour
 
     private void Start()
     {
+        vibDictionary = new Dictionary<VibKey, OVRHapticsClip>();
         ReadVibDataFromJson();
     }
 
@@ -37,26 +39,44 @@ public class VibManager : MonoBehaviour
     //Read RawData from each json files in vibDataFiles array and add those data to vibDictionary
     private void ReadVibDataFromJson()
     {
-        TextAsset[] vibDataFiles = Resources.LoadAll<TextAsset>("VibData");
+        TextAsset[] _vibDataFiles = Resources.LoadAll<TextAsset>("VibData");
 
-        vibDictionary = new Dictionary<VibKey, OVRHapticsClip>();
-
-        for(int _i = 0 ; _i < vibDataFiles.Length ; _i ++)
+        for(int _i = 0 ; _i < _vibDataFiles.Length ; _i ++)
         {
-            VibDataContent vibDataContent = JsonUtility.FromJson<VibDataContent>(vibDataFiles[_i].ToString());  //parse json
+            VibDataContent vibDataContent = JsonUtility.FromJson<VibDataContent>(_vibDataFiles[_i].ToString());  //parse json
             string[] strigns = vibDataContent.RawData.Split(',');
             byte[] _bytes = new byte[strigns.Length];             //convert rawdata to byte array
             for(int i = 0; i < strigns.Length; i++)
             {
-                Debug.Log(int.Parse(strigns[i]) + "  " + System.Convert.ToByte(int.Parse(strigns[i])));
                 _bytes[i] = System.Convert.ToByte(int.Parse(strigns[i]));
             }
 
             OVRHapticsClip _clip = new OVRHapticsClip(_bytes, _bytes.Length);
-            VibKey _key =(VibKey) System.Enum.Parse(typeof(VibKey), vibDataFiles[_i].name);
+
+            string _name = _vibDataFiles[_i].name;
+            _name = _name = Regex.Replace(_name, @"[^a-zA-Z0-9가-힣]", "_"); 
+            _name = _name.Replace(" ", string.Empty); 
+            VibKey _key =(VibKey) System.Enum.Parse(typeof(VibKey), _name);
             vibDictionary.Add(_key, _clip);               //add these data sets to dictionary
         }        
     }
+
+    private void ReadVibDataFromAudioClips()
+    {
+        AudioClip[] _audioClips = Resources.LoadAll<AudioClip>("VibData");
+
+        for(int _i = 0 ; _i < _audioClips.Length ; _i ++)
+        {
+            OVRHapticsClip _clip = new OVRHapticsClip(_audioClips[_i]);
+
+            string _name = _audioClips[_i].name;
+            _name = _name = Regex.Replace(_name, @"[^a-zA-Z0-9가-힣]", "_"); 
+            _name = _name.Replace(" ", string.Empty);             
+            VibKey _key =(VibKey) System.Enum.Parse(typeof(VibKey), _name);
+            vibDictionary.Add(_key, _clip);               //add these data sets to dictionary            
+        }
+    }
+
 
     // String to byte array
     private byte[] StringToByte(string str)
