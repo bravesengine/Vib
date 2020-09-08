@@ -16,6 +16,7 @@ public class VibManager : MonoBehaviour
         public int Version;
     }
 
+
     public static VibManager instance; 
     public static Dictionary<VibKey, OVRHapticsClip>  vibDictionary;
     public static VibKey testKey = (VibKey) 0;
@@ -26,6 +27,7 @@ public class VibManager : MonoBehaviour
         {
             Destroy(this);
         }
+
         instance = this;
     }
 
@@ -47,6 +49,7 @@ public class VibManager : MonoBehaviour
             VibDataContent vibDataContent = JsonUtility.FromJson<VibDataContent>(_vibDataFiles[_i].ToString());  //parse json
             string[] strigns = vibDataContent.RawData.Split(',');
             byte[] _bytes = new byte[strigns.Length];             //convert rawdata to byte array
+
             for(int i = 0; i < strigns.Length; i++)
             {
                 _bytes[i] = System.Convert.ToByte(int.Parse(strigns[i]));
@@ -55,8 +58,11 @@ public class VibManager : MonoBehaviour
             OVRHapticsClip _clip = new OVRHapticsClip(_bytes, _bytes.Length);
 
             string _name = _vibDataFiles[_i].name;
+            // Replace non alphabetic characters to underscore 
             _name = _name = Regex.Replace(_name, @"[^a-zA-Z0-9가-힣]", "_"); 
+            // Remove space in enums
             _name = _name.Replace(" ", string.Empty); 
+
             VibKey _key =(VibKey) System.Enum.Parse(typeof(VibKey), _name);
             vibDictionary.Add(_key, _clip);               //add these data sets to dictionary
         }        
@@ -71,10 +77,13 @@ public class VibManager : MonoBehaviour
             OVRHapticsClip _clip = new OVRHapticsClip(_audioClips[_i]);
 
             string _name = _audioClips[_i].name;
+            // Replace non alphabetic characters to underscore 
             _name = _name = Regex.Replace(_name, @"[^a-zA-Z0-9가-힣]", "_"); 
+            // Remove space in enums
             _name = _name.Replace(" ", string.Empty);             
+            
             VibKey _key =(VibKey) System.Enum.Parse(typeof(VibKey), _name);
-            vibDictionary.Add(_key, _clip);               //add these data sets to dictionary            
+            vibDictionary.Add(_key, _clip);               //add these audio base clips to dictionary            
         }
     }
 
