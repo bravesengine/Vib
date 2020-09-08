@@ -41,6 +41,7 @@ public class VibManagerEditor : Editor
 
             if(GUILayout.Button("Test"))
             {
+                // Test vibration works on both controller simultaneosly
                 TestVibration();
             }
         GUILayout.EndHorizontal();
@@ -66,8 +67,10 @@ public class VibManagerEditor : Editor
         TextAsset[] _vibDataFiles = Resources.LoadAll<TextAsset>("VibData");
         AudioClip[] _audioClips = Resources.LoadAll<AudioClip>("VibData");
 
-        string enumTitle = "VibKey";                   
+        string enumTitle = "VibKey";   
+
         List<string> enumEntries = new List<string>();                  //add vibdata names to string list to enumerize them
+
         for(int _i = 0 ; _i < _vibDataFiles.Length ; _i ++)
         {        
             string _name = _vibDataFiles[_i].name;
@@ -75,6 +78,7 @@ public class VibManagerEditor : Editor
             _name = _name.Replace(" ", string.Empty); 
             enumEntries.Add(_name);
         }
+        
         for(int _i = 0 ; _i < _audioClips.Length ; _i ++)
         {    
             string _name = _audioClips[_i].name;
