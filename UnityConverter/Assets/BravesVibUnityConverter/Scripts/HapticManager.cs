@@ -13,7 +13,14 @@ public class HapticManager : MonoBehaviour
 
     private void OnEnable()
     {
-        bytes = System.Text.Encoding.UTF8.GetBytes(byteString);
+        string[] strigns = byteString.Split(',');
+
+        byte[] bytes = new byte[strigns.Length];             //convert rawdata to byte array
+        for(int i = 0; i < strigns.Length; i++)
+        {
+            bytes[i] = System.Convert.ToByte(int.Parse(strigns[i]));
+        }
+
         Debug.Log(bytes.Length);
         Debug.Log("SampleSizeInBytes is " + OVRHaptics.Config.SampleSizeInBytes);
 
