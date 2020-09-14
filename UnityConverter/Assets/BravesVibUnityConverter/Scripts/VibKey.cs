@@ -1,12 +1,12 @@
 public enum VibKey
 {
-	Vib1,
-	Vib2,
-	Vib3,
-	Vib4,
-	Vib5,
-	Heartbeat_Fast_1,
-	MonsterAttack,
-	Splash,
-	Thunder_Clap_Loud,
+	VibData1,
+	VibData2,
+	VibData3,
+	VibData4,
+	VibData5,
+	AudioClip1,
+	AudioClip2,
+	AudioClip3,
+	AudioClip4,
 }
