@@ -6,7 +6,7 @@
 　
 　
 * 활용툴 버전 정보
-    * 비주얼 스튜디오 C++ 2017 혹은 그 이상 버전   
+    * 비주얼 스튜디오 C++ 2019 혹은 그 이상 버전   
       https://docs.microsoft.com/ko-kr/visualstudio/productinfo/installing-an-earlier-release-of-vs2017  
       
     * UI를 적용한 전체 프레임을 구성하기 위해 오픈소스 중 Qt를 이용 
@@ -72,7 +72,7 @@
 　Usually, a lot of Oculuse rift user uses unity's auto converting tools which unity provides, but that tools doesn't support modifying function or function to create vibration data without sound file. we are working on those problems with this project. 
 
 * Version information for developing tools
-    * Visual Studio C++ 2017 or above
+    * Visual Studio C++ 2019 or above
     * Used Opensource project Qt for creating UI frame: 
         - Used Qt version 5.11.1 for developing
         - Confirmed compatibility with Qt 5.12.9 (Download for Opensource user)
