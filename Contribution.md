@@ -1,6 +1,6 @@
 # Contributing
 We love pull requests from everyone. By contributing to this repository, you
-agree to abide by the [Code of Conduct](CODE_OF_CONDUCT.md). 
+agree to abide by the [Code of Conduct](Code_of_conduct.md). 
 We want to make contributing to this project as transparent as possible, whether it is :
   * Reporting a bug
   * Discussing the current state of the code
