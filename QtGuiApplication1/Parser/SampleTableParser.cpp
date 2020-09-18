@@ -6,7 +6,7 @@
 #include <QtXmlPatterns/QXmlSchemaValidator> 
 
 #include "Samples.h"
-#include "Parser.h""
+#include "Parser.h"
 #include "handler.h"
 
 #include <qdatetime.h>
