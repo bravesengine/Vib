@@ -1,3 +1,12 @@
+ | Win 64 |
+ | -------|
+[![Build Status](http://build.bravesgames.com:8080/buildStatus/icon?job=VIP)](http://build.bravesgames.com:8080/job/VIP/)  
+
+
+
+
+
+
 # VR 햅틱 진동 데이터 개발 툴에 대해
 * 개요  
 　본 프로그램은 현재 오큘리스 리프트 기기 전용으로 제작되고 있습니다.
