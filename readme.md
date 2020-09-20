@@ -21,7 +21,6 @@
       
     * UI를 적용한 전체 프레임을 구성하기 위해 오픈소스 중 Qt를 이용 
       : 
-        - Qt버전 5.11.1 에서 작업 
         - Qt 5.12.9 이상 (Download for Opensource user)
         https://www.qt.io/download  
         
@@ -84,9 +83,10 @@
 * Version information for developing tools
     * Visual Studio C++ 2019 or above
     * Used Opensource project Qt for creating UI frame: 
-        - Used Qt version 5.11.1 for developing
         - Confirmed compatibility with Qt 5.12.9 (Download for Opensource user)
+                https://www.qt.io/download  
      * Requires to download Qt tool for VS 2017 for Visual Studio setting (Based on Visual studio version)
+     https://marketplace.visualstudio.com/items?itemName=TheQtCompany.QtVisualStudioTools-19123  
      * Used Qtustomplot for chart movements. 
      * Tested with Oculus SDK 1.30.0
 
