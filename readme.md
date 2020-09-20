@@ -1,8 +1,9 @@
- | Win 64 |
- | -------|
-[![Build Status](http://build.bravesgames.com:8080/buildStatus/icon?job=VIP)](http://build.bravesgames.com:8080/job/VIP/)  
-
-
+ | CodeCI | Package |
+ |--------|---------|
+[![Build Status](http://build.bravesgames.com:8080/buildStatus/icon?job=VIP)](http://build.bravesgames.com:8080/job/VIP/)|[![Build Status](http://build.bravesgames.com:8080/buildStatus/icon?job=Vib%2FVib_CodeCI)](http://build.bravesgames.com:8080/job/Vib/job/Vib_CodeCI/)|[![Build Status](http://build.bravesgames.com:8080/buildStatus/icon?job=Vib%2FVib_Packaging)](http://build.bravesgames.com:8080/job/Vib/job/Vib_Packaging/)  
+  
+    
+    
 
 
 
