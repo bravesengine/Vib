@@ -70,9 +70,9 @@ it doesn't fall under any section. Make sure that your implementation works.
 - adding test cases.
 - improving documentation.
 
-## Pull Requests
-Push to your fork and submit a pull request.
-We will review and may suggest some changes or improvements or alternatives.
+## 풀리퀘스트
+포트하엿 수정한 파일을 업로드하고 풀리리퀘스트를 신청하십시오.
+저희쪽에서 수정내역을 리뷰하고, 약간의 변경을 요청하거나, 다른 방식으로의 코드를  요청할 수 있습니다. 
 Some things that will increase the chance that your pull request is accepted:
 * Write clean and understandable code.
 * Properly comment the code. 
