@@ -56,7 +56,7 @@
 
 
 # 홈페이지
-   [Braves 홈페이지](http://www.bravegames.co.kr)
+   [Braves 홈페이지](http://www.bravegames.co.kr){: target="_blank"}
   
 # 상세 설명
  [Wiki 페이지 참조](https://github.com/bravesengine/Vib/wiki)
@@ -115,7 +115,7 @@ This manual for tools will be published with Wiki pages. This tools uses default
 
 
 # Homepage
-   [Braves Homepage](http://www.bravegames.co.kr)
+   [Braves Homepage](http://www.bravegames.co.kr){: target="_blank"}
 
 # Detailed Description
    [refer to Wiki page](https://github.com/bravesengine/Vib/wiki)
