@@ -5,18 +5,26 @@
 TEMPLATE = app
 TARGET = HapticEditor
 DESTDIR = ../x64/Debug
-QT += core opengl gui widgets charts
 CONFIG += debug
-DEFINES += _UNICODE WIN64 QT_CHARTS_LIB QT_OPENGL_LIB QT_WIDGETS_LIB QT_PRINTSUPPORT_LIB
-INCLUDEPATH += ./GeneratedFiles \
-    . \
-    ./GeneratedFiles/$(ConfigurationName)
-LIBS += -lopengl32 \
-    -lglu32 \
-    -lshell32
+DEFINES += _UNICODE WIN64 SUPERIMPOSE_PROGRESS_ON_WAVEFORM SPECTRUM_ANALYSER_SEPARATE_THREAD
+INCLUDEPATH += . \
+    ./lame-master/include \
+    ./GeneratedFiles \
+    ./GeneratedFiles/$(ConfigurationName) \
+    ./QXlsx/header \
+    ./QXsdCode/include \
+    ./Device \
+    ./Device/Plugin/oculus/LibOVR/include \
+    ./Device/PlugIn/oculus/LibOVRKernel/Src \
+    ./Parser \
+    ./Parser/include \
+    ./FileSystem \
+    ./Sound \
+    ./Sound/Fftreal
 DEPENDPATH += .
 MOC_DIR += ./GeneratedFiles/$(ConfigurationName)
 OBJECTS_DIR += debug
 UI_DIR += ./GeneratedFiles
 RCC_DIR += ./GeneratedFiles
 include(HapticEditor.pri)
+TRANSLATIONS += hapticeditor_ko.ts

@@ -13,17 +13,18 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{B12702AD-ABFB-343A-A199-8E24837244A3}</ProjectGuid>
     <Keyword>Qt4VSv1.0</Keyword>
-    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
     <ProjectName>HapticEditor</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <PropertyGroup Condition="'$(QtMsBuild)'=='' or !Exists('$(QtMsBuild)\qt.targets')">
@@ -53,25 +54,25 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <PreprocessorDefinitions>UNICODE;_UNICODE;WIN32;WIN64;QT_CHARTS_LIB;QT_CORE_LIB;QT_GUI_LIB;QT_OPENGL_LIB;QT_WIDGETS_LIB;QT_PRINTSUPPORT_LIB;QT_MULTIMEDIA_LIB;SUPERIMPOSE_PROGRESS_ON_WAVEFORM;SPECTRUM_ANALYSER_SEPARATE_THREAD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGamepad;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtMultimedia;$(QTDIR)\include\QtScopeGuard;.\QXlsx\header;.\QXsdCode\include;.\Device;.\Device\Plugin\oculus\LibOVR\include;.\Device\PlugIn\oculus\LibOVRKernel\Src;C:\Program Files (x86)\Visual Leak Detector\include;.\Parser\;.\Parser\include;.\FileSystem;.\Sound;.\Sound\Fftreal;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>UNICODE;_UNICODE;WIN64;SUPERIMPOSE_PROGRESS_ON_WAVEFORM;SPECTRUM_ANALYSER_SEPARATE_THREAD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(QTDIR)\include;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGlobal;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtMultimedia;$(QTDIR)\include\QtGamepad;.;.\lame-master\include;.\GeneratedFiles;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtScopeGuard;.\QXlsx\header;.\QXsdCode\include;.\Device;.\Device\Plugin\oculus\LibOVR\include;.\Device\PlugIn\oculus\LibOVRKernel\Src;C:\Program Files (x86)\Visual Leak Detector\include;.\Parser\;.\Parser\include;.\FileSystem;.\Sound;.\Sound\Fftreal;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
-      <AdditionalLibraryDirectories>$(QTDIR)\lib;$(ProjectDir)QXlsx\lib;$(ProjectDir)Device\Plugin\libs\x64Debug;C:\Program Files (x86)\Visual Leak Detector\lib\Win64;$(ProjectDir)QXsdCode\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>.\lame-master\vc_solution\x64\Debug;$(QTDIR)\lib;$(ProjectDir)QXlsx\lib;$(ProjectDir)Device\Plugin\libs\x64Debug;C:\Program Files (x86)\Visual Leak Detector\lib\Win64;$(ProjectDir)QXsdCode\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>qtmaind.lib;Qt5Chartsd.lib;Qt5Cored.lib;Qt5Guid.lib;Qt5OpenGLd.lib;opengl32.lib;glu32.lib;Qt5Widgetsd.lib;Qt5PrintSupportd.lib;shell32.lib;QXlsx_d.lib;LibOVR.lib;LibOVRKernel.lib;QT5Gamepad.lib;QXsdCode_d.lib;Qt5Xmld.lib;Qt5XmlPatternsd.lib;Qt5Multimediad.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>libmpghip-static.lib;libmp3lame-static.lib;libmp3lame.lib;qtmaind.lib;opengl32.lib;glu32.lib;shell32.lib;LibOVR.lib;LibOVRKernel.lib;QT5Gamepad.lib;QXsdCode_d.lib;Qt5Cored.lib;Qt5Guid.lib;Qt5Widgetsd.lib;QXlsx_d.lib;Qt5Xmld.lib;Qt5Scxmld.lib;Qt5Multimediad.lib;Qt5XmlPatternsd.lib;Qt5PrintSupportd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/NODEFAULTLIB:library %(AdditionalOptions)</AdditionalOptions>
     </Link>
     <QtMoc>
       <OutputFile>.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</OutputFile>
       <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
-      <IncludePath>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGamepad;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtMultimedia;$(QTDIR)\include\QtScopeGuard;.\QXlsx\header;.\QXsdCode\include;.\Device;.\Device\Plugin\oculus\LibOVR\include;.\Device\PlugIn\oculus\LibOVRKernel\Src;C:\Program Files (x86)\Visual Leak Detector\include;.\Parser\;.\Parser\include;.\FileSystem;.\Sound;.\Sound\Fftreal;%(AdditionalIncludeDirectories)</IncludePath>
-      <Define>UNICODE;_UNICODE;WIN32;WIN64;QT_CHARTS_LIB;QT_CORE_LIB;QT_GUI_LIB;QT_OPENGL_LIB;QT_WIDGETS_LIB;QT_PRINTSUPPORT_LIB;QT_MULTIMEDIA_LIB;SUPERIMPOSE_PROGRESS_ON_WAVEFORM;SPECTRUM_ANALYSER_SEPARATE_THREAD;%(PreprocessorDefinitions)</Define>
+      <IncludePath>$(QTDIR)\include;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGlobal;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtMultimedia;$(QTDIR)\include\QtGamepad;.;.\lame-master\include;.\GeneratedFiles;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtScopeGuard;.\QXlsx\header;.\QXsdCode\include;.\Device;.\Device\Plugin\oculus\LibOVR\include;.\Device\PlugIn\oculus\LibOVRKernel\Src;C:\Program Files (x86)\Visual Leak Detector\include;.\Parser\;.\Parser\include;.\FileSystem;.\Sound;.\Sound\Fftreal;%(AdditionalIncludeDirectories)</IncludePath>
+      <Define>UNICODE;_UNICODE;WIN64;SUPERIMPOSE_PROGRESS_ON_WAVEFORM;SPECTRUM_ANALYSER_SEPARATE_THREAD;%(PreprocessorDefinitions)</Define>
       <QTDIR>$(QTDIR)</QTDIR>
     </QtMoc>
     <QtUic>
@@ -84,12 +85,15 @@
       <OutputFile>.\GeneratedFiles\qrc_%(Filename).cpp</OutputFile>
       <QTDIR>$(QTDIR)</QTDIR>
     </QtRcc>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <PreprocessorDefinitions>UNICODE;_UNICODE;WIN32;WIN64;QT_NO_DEBUG;NDEBUG;QT_CHARTS_LIB;QT_CORE_LIB;QT_GUI_LIB;QT_OPENGL_LIB;QT_WIDGETS_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGamepad;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtMultimedia;.\QXlsx\header;.\QXsdCode\include;.\Device;.\Device\Plugin\oculus\LibOVR\include;.\Device\PlugIn\oculus\LibOVRKernel\Src;C:\Program Files (x86)\Visual Leak Detector\include;.\Parser\;.\Parser\include;.\FileSystem;.\Sound;.\Sound\Fftreal;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>UNICODE;_UNICODE;WIN32;WIN64;QT_NO_DEBUG;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);.\QXlsx\header;.\QXsdCode\include;.\Device;.\Device\Plugin\oculus\LibOVR\include;.\Device\PlugIn\oculus\LibOVRKernel\Src;C:\Program Files (x86)\Visual Leak Detector\include;.\Parser\;.\Parser\include;.\FileSystem;.\Sound;.\Sound\Fftreal;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
       <Optimization>Disabled</Optimization>
@@ -99,13 +103,13 @@
       <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
       <AdditionalLibraryDirectories>$(QTDIR)\lib;$(ProjectDir)QXlsx\lib;C:\Program Files (x86)\Visual Leak Detector\lib\Win64;$(ProjectDir)Device\Plugin\libs\x64Release;$(ProjectDir)QXsdCode\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>qtmain.lib;Qt5Charts.lib;Qt5Core.lib;Qt5Gui.lib;Qt5OpenGL.lib;opengl32.lib;glu32.lib;Qt5Widgets.lib;Qt5PrintSupport.lib;QXlsx.lib;LibOVR.lib;LibOVRKernel.lib;QT5Gamepad.lib;QXsdCode.lib;Qt5Xml.lib;Qt5XmlPatterns.lib;Qt5Multimedia.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>qtmain.lib;opengl32.lib;glu32.lib;QXlsx.lib;LibOVR.lib;LibOVRKernel.lib;QT5Gamepad.lib;QXsdCode.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <QtMoc>
       <OutputFile>.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</OutputFile>
       <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
-      <IncludePath>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGamepad;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtMultimedia;.\QXlsx\header;.\QXsdCode\include;.\Device;.\Device\Plugin\oculus\LibOVR\include;.\Device\PlugIn\oculus\LibOVRKernel\Src;C:\Program Files (x86)\Visual Leak Detector\include;.\Parser\;.\Parser\include;.\FileSystem;.\Sound;.\Sound\Fftreal;%(AdditionalIncludeDirectories)</IncludePath>
-      <Define>UNICODE;_UNICODE;WIN32;WIN64;QT_NO_DEBUG;NDEBUG;QT_CHARTS_LIB;QT_CORE_LIB;QT_GUI_LIB;QT_OPENGL_LIB;QT_WIDGETS_LIB;%(PreprocessorDefinitions)</Define>
+      <IncludePath>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);.\QXlsx\header;.\QXsdCode\include;.\Device;.\Device\Plugin\oculus\LibOVR\include;.\Device\PlugIn\oculus\LibOVRKernel\Src;C:\Program Files (x86)\Visual Leak Detector\include;.\Parser\;.\Parser\include;.\FileSystem;.\Sound;.\Sound\Fftreal;%(AdditionalIncludeDirectories)</IncludePath>
+      <Define>UNICODE;_UNICODE;WIN32;WIN64;QT_NO_DEBUG;NDEBUG;%(PreprocessorDefinitions)</Define>
       <QTDIR>$(QTDIR)</QTDIR>
     </QtMoc>
     <QtUic>
@@ -120,6 +124,7 @@
     </QtRcc>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="FileSystem\lameHelper.cpp" />
     <ClCompile Include="ComboBoxDelegate.cpp" />
     <ClCompile Include="DeviceSelectHud.cpp" />
     <ClCompile Include="DeviceStateProgressHud.cpp" />
@@ -181,21 +186,13 @@
     <ClCompile Include="UndoDataTypes.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="QtHapticMain.h">
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;%(AdditionalIncludeDirectories)</IncludePath>
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;C:\Qt\5.11.1\msvc2017_64\include;.\GeneratedFiles\$(ConfigurationName);C:\Qt\5.11.1\msvc2017_64\include\QtCharts;C:\Qt\5.11.1\msvc2017_64\include\QtCore;C:\Qt\5.11.1\msvc2017_64\include\QtGui;C:\Qt\5.11.1\msvc2017_64\include\QtANGLE;C:\Qt\5.11.1\msvc2017_64\include\QtOpenGL;C:\Qt\5.11.1\msvc2017_64\include\QtWidgets;%(AdditionalIncludeDirectories)</IncludePath>
-    </QtMoc>
+    <QtMoc Include="QtHapticMain.h" />
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="QtHapticMain.qrc" />
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="qcustomplot.h">
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets</IncludePath>
-      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_CHARTS_LIB;QT_CORE_LIB;QT_GUI_LIB;QT_OPENGL_LIB;QT_WIDGETS_LIB;QT_PRINTSUPPORT_LIB</Define>
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets</IncludePath>
-      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CHARTS_LIB;QT_CORE_LIB;QT_GUI_LIB;QT_OPENGL_LIB;QT_WIDGETS_LIB</Define>
-    </QtMoc>
+    <QtMoc Include="qcustomplot.h" />
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="Device.ui" />
@@ -206,81 +203,24 @@
     <QtUic Include="QtHapticMain.ui" />
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="HapticEditorWindowHud.h">
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets</IncludePath>
-      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_CHARTS_LIB;QT_CORE_LIB;QT_GUI_LIB;QT_OPENGL_LIB;QT_WIDGETS_LIB;QT_PRINTSUPPORT_LIB</Define>
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets</IncludePath>
-      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CHARTS_LIB;QT_CORE_LIB;QT_GUI_LIB;QT_OPENGL_LIB;QT_WIDGETS_LIB</Define>
-    </QtMoc>
+    <QtMoc Include="HapticEditorWindowHud.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="FileSystem\lameHelper.h" />
     <ClInclude Include="call_once.h" />
-    <QtMoc Include="DeviceSelectHud.h">
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;$(ProjectDir)QXlsx\header</IncludePath>
-      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_CHARTS_LIB;QT_CORE_LIB;QT_GUI_LIB;QT_OPENGL_LIB;QT_WIDGETS_LIB;QT_PRINTSUPPORT_LIB</Define>
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets</IncludePath>
-      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CHARTS_LIB;QT_CORE_LIB;QT_GUI_LIB;QT_OPENGL_LIB;QT_WIDGETS_LIB</Define>
-    </QtMoc>
-    <QtMoc Include="Device\HapticDevice_Oculus.h">
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;$(ProjectDir)QXlsx\header</IncludePath>
-      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_CHARTS_LIB;QT_CORE_LIB;QT_GUI_LIB;QT_OPENGL_LIB;QT_WIDGETS_LIB;QT_PRINTSUPPORT_LIB</Define>
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets</IncludePath>
-      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CHARTS_LIB;QT_CORE_LIB;QT_GUI_LIB;QT_OPENGL_LIB;QT_WIDGETS_LIB</Define>
-    </QtMoc>
-    <QtMoc Include="Device\HapticDevice_Vive.h">
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;$(ProjectDir)QXlsx\header</IncludePath>
-      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_CHARTS_LIB;QT_CORE_LIB;QT_GUI_LIB;QT_OPENGL_LIB;QT_WIDGETS_LIB;QT_PRINTSUPPORT_LIB</Define>
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets</IncludePath>
-      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CHARTS_LIB;QT_CORE_LIB;QT_GUI_LIB;QT_OPENGL_LIB;QT_WIDGETS_LIB</Define>
-    </QtMoc>
-    <QtMoc Include="Device\HapticDevice_XboxPad.h">
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;$(ProjectDir)QXlsx\header</IncludePath>
-      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_CHARTS_LIB;QT_CORE_LIB;QT_GUI_LIB;QT_OPENGL_LIB;QT_WIDGETS_LIB;QT_PRINTSUPPORT_LIB</Define>
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets</IncludePath>
-      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CHARTS_LIB;QT_CORE_LIB;QT_GUI_LIB;QT_OPENGL_LIB;QT_WIDGETS_LIB</Define>
-    </QtMoc>
-    <QtMoc Include="Device\HapticDeviceManager.h">
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;$(ProjectDir)QXlsx\header</IncludePath>
-      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_CHARTS_LIB;QT_CORE_LIB;QT_GUI_LIB;QT_OPENGL_LIB;QT_WIDGETS_LIB;QT_PRINTSUPPORT_LIB</Define>
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets</IncludePath>
-      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CHARTS_LIB;QT_CORE_LIB;QT_GUI_LIB;QT_OPENGL_LIB;QT_WIDGETS_LIB</Define>
-    </QtMoc>
-    <QtMoc Include="Device\HapticIDevice.h">
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;$(ProjectDir)QXlsx\header</IncludePath>
-      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_CHARTS_LIB;QT_CORE_LIB;QT_GUI_LIB;QT_OPENGL_LIB;QT_WIDGETS_LIB;QT_PRINTSUPPORT_LIB</Define>
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets</IncludePath>
-      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CHARTS_LIB;QT_CORE_LIB;QT_GUI_LIB;QT_OPENGL_LIB;QT_WIDGETS_LIB</Define>
-    </QtMoc>
-    <QtMoc Include="Device\HapticDeviceState.h">
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;$(ProjectDir)QXlsx\header;.\Device;.\Device\Plugin\oculus\LibOVR\include;.\Device\PlugIn\oculus\LibOVRKernel\Src</IncludePath>
-      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_CHARTS_LIB;QT_CORE_LIB;QT_GUI_LIB;QT_OPENGL_LIB;QT_WIDGETS_LIB;QT_PRINTSUPPORT_LIB</Define>
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets</IncludePath>
-      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CHARTS_LIB;QT_CORE_LIB;QT_GUI_LIB;QT_OPENGL_LIB;QT_WIDGETS_LIB</Define>
-    </QtMoc>
-    <QtMoc Include="DeviceStateProgressHud.h">
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;$(ProjectDir)QXlsx\header;.\Device;.\Device\Plugin\oculus\LibOVR\include;.\Device\PlugIn\oculus\LibOVRKernel\Src</IncludePath>
-      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_CHARTS_LIB;QT_CORE_LIB;QT_GUI_LIB;QT_OPENGL_LIB;QT_WIDGETS_LIB;QT_PRINTSUPPORT_LIB</Define>
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets</IncludePath>
-      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CHARTS_LIB;QT_CORE_LIB;QT_GUI_LIB;QT_OPENGL_LIB;QT_WIDGETS_LIB</Define>
-    </QtMoc>
-    <QtMoc Include="ComboBoxDelegate.h">
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGamepad;$(QTDIR)\include\QtXml;.\QXlsx\header;.\QXsdCode\include;.\Device;.\Device\Plugin\oculus\LibOVR\include;.\Device\PlugIn\oculus\LibOVRKernel\Src;C:\Program Files (x86)\Visual Leak Detector\include;.\Parser;.\Parser\include</IncludePath>
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;C:\Program Files (x86)\Visual Leak Detector\include</IncludePath>
-    </QtMoc>
+    <QtMoc Include="DeviceSelectHud.h" />
+    <QtMoc Include="Device\HapticDevice_Oculus.h" />
+    <QtMoc Include="Device\HapticDevice_Vive.h" />
+    <QtMoc Include="Device\HapticDevice_XboxPad.h" />
+    <QtMoc Include="Device\HapticDeviceManager.h" />
+    <QtMoc Include="Device\HapticIDevice.h" />
+    <QtMoc Include="Device\HapticDeviceState.h" />
+    <QtMoc Include="DeviceStateProgressHud.h" />
+    <QtMoc Include="ComboBoxDelegate.h" />
     <ClInclude Include="Device\HapticBufferClip.h" />
     <ClInclude Include="Device\HapticBufferClip_Oculus.h" />
-    <QtMoc Include="Device\HapticClipResouce.h">
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGamepad;$(ProjectDir)QXlsx\header;.\Device;.\Device\Plugin\oculus\LibOVR\include;.\Device\PlugIn\oculus\LibOVRKernel\Src;C:\Program Files (x86)\Visual Leak Detector\include</IncludePath>
-      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_CHARTS_LIB;QT_CORE_LIB;QT_GUI_LIB;QT_OPENGL_LIB;QT_WIDGETS_LIB;QT_PRINTSUPPORT_LIB</Define>
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;C:\Program Files (x86)\Visual Leak Detector\include</IncludePath>
-      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CHARTS_LIB;QT_CORE_LIB;QT_GUI_LIB;QT_OPENGL_LIB;QT_WIDGETS_LIB</Define>
-    </QtMoc>
-    <QtMoc Include="Device\HapticDeviceCommand.h">
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGamepad;$(ProjectDir)QXlsx\header;.\Device;.\Device\Plugin\oculus\LibOVR\include;.\Device\PlugIn\oculus\LibOVRKernel\Src;C:\Program Files (x86)\Visual Leak Detector\include</IncludePath>
-      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_CHARTS_LIB;QT_CORE_LIB;QT_GUI_LIB;QT_OPENGL_LIB;QT_WIDGETS_LIB;QT_PRINTSUPPORT_LIB</Define>
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;C:\Program Files (x86)\Visual Leak Detector\include</IncludePath>
-      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CHARTS_LIB;QT_CORE_LIB;QT_GUI_LIB;QT_OPENGL_LIB;QT_WIDGETS_LIB</Define>
-    </QtMoc>
+    <QtMoc Include="Device\HapticClipResouce.h" />
+    <QtMoc Include="Device\HapticDeviceCommand.h" />
     <ClInclude Include="Device\HapticDeviceCommander.h" />
     <ClInclude Include="Device\HT_GlobalTypes.h">
       <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;$(ProjectDir)QXlsx\header;.\Device;.\Device\Plugin\oculus\LibOVR\include;.\Device\PlugIn\oculus\LibOVRKernel\Src</IncludePath>
@@ -348,120 +288,38 @@
     <ClInclude Include="Device\PlugIn\oculus\LibOVR\Include\OVR_CAPI_Vk.h" />
     <ClInclude Include="Device\PlugIn\oculus\LibOVR\Include\OVR_ErrorCode.h" />
     <ClInclude Include="Device\PlugIn\oculus\LibOVR\Include\OVR_Version.h" />
-    <QtMoc Include="GenDocument.h">
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGamepad;$(QTDIR)\include\QtXml;.\QXlsx\header;.\QXsdCode\include;.\Device;.\Device\Plugin\oculus\LibOVR\include;.\Device\PlugIn\oculus\LibOVRKernel\Src;C:\Program Files (x86)\Visual Leak Detector\include;.\Parser;.\Parser\include</IncludePath>
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;C:\Program Files (x86)\Visual Leak Detector\include</IncludePath>
-    </QtMoc>
-    <QtMoc Include="HapticEditorPopupMenu.h">
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGamepad;$(QTDIR)\include\QtXml;.\QXlsx\header;.\QXsdCode\include;.\Device;.\Device\Plugin\oculus\LibOVR\include;.\Device\PlugIn\oculus\LibOVRKernel\Src;C:\Program Files (x86)\Visual Leak Detector\include;.\Parser;.\Parser\include</IncludePath>
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;C:\Program Files (x86)\Visual Leak Detector\include</IncludePath>
-    </QtMoc>
-    <QtMoc Include="FileSystem\BVF_Exporter.h">
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGamepad;$(QTDIR)\include\QtXml;.\QXlsx\header;.\QXsdCode\include;.\Device;.\Device\Plugin\oculus\LibOVR\include;.\Device\PlugIn\oculus\LibOVRKernel\Src;C:\Program Files (x86)\Visual Leak Detector\include;.\Parser;.\Parser\include</IncludePath>
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;C:\Program Files (x86)\Visual Leak Detector\include</IncludePath>
-    </QtMoc>
-    <QtMoc Include="FileSystem\BVF_Importer.h">
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGamepad;$(QTDIR)\include\QtXml;.\QXlsx\header;.\QXsdCode\include;.\Device;.\Device\Plugin\oculus\LibOVR\include;.\Device\PlugIn\oculus\LibOVRKernel\Src;C:\Program Files (x86)\Visual Leak Detector\include;.\Parser;.\Parser\include</IncludePath>
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;C:\Program Files (x86)\Visual Leak Detector\include</IncludePath>
-    </QtMoc>
-    <QtMoc Include="FileSystem\H_Exporter.h">
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGamepad;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtMultimedia;$(QTDIR)\include\QtScopeGuard;.\QXlsx\header;.\QXsdCode\include;.\Device;.\Device\Plugin\oculus\LibOVR\include;.\Device\PlugIn\oculus\LibOVRKernel\Src;C:\Program Files (x86)\Visual Leak Detector\include;.\Parser;.\Parser\include;.\FileSystem;.\Sound;.\Sound\Fftreal</IncludePath>
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGamepad;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtMultimedia;.\QXlsx\header;.\QXsdCode\include;.\Device;.\Device\Plugin\oculus\LibOVR\include;.\Device\PlugIn\oculus\LibOVRKernel\Src;C:\Program Files (x86)\Visual Leak Detector\include;.\Parser;.\Parser\include;.\FileSystem;.\Sound;.\Sound\Fftreal</IncludePath>
-    </QtMoc>
-    <QtMoc Include="FileSystem\H_Importer.h">
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGamepad;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtMultimedia;$(QTDIR)\include\QtScopeGuard;.\QXlsx\header;.\QXsdCode\include;.\Device;.\Device\Plugin\oculus\LibOVR\include;.\Device\PlugIn\oculus\LibOVRKernel\Src;C:\Program Files (x86)\Visual Leak Detector\include;.\Parser;.\Parser\include;.\FileSystem;.\Sound;.\Sound\Fftreal</IncludePath>
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGamepad;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtMultimedia;.\QXlsx\header;.\QXsdCode\include;.\Device;.\Device\Plugin\oculus\LibOVR\include;.\Device\PlugIn\oculus\LibOVRKernel\Src;C:\Program Files (x86)\Visual Leak Detector\include;.\Parser;.\Parser\include;.\FileSystem;.\Sound;.\Sound\Fftreal</IncludePath>
-    </QtMoc>
-    <QtMoc Include="FileSystem\HFS_Manager.h">
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGamepad;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtMultimedia;$(QTDIR)\include\QtScopeGuard;.\QXlsx\header;.\QXsdCode\include;.\Device;.\Device\Plugin\oculus\LibOVR\include;.\Device\PlugIn\oculus\LibOVRKernel\Src;C:\Program Files (x86)\Visual Leak Detector\include;.\Parser;.\Parser\include;.\FileSystem;.\Sound;.\Sound\Fftreal</IncludePath>
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGamepad;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtMultimedia;.\QXlsx\header;.\QXsdCode\include;.\Device;.\Device\Plugin\oculus\LibOVR\include;.\Device\PlugIn\oculus\LibOVRKernel\Src;C:\Program Files (x86)\Visual Leak Detector\include;.\Parser;.\Parser\include;.\FileSystem;.\Sound;.\Sound\Fftreal</IncludePath>
-    </QtMoc>
-    <QtMoc Include="FileSystem\WAVE_Importer.h">
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGamepad;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtMultimedia;$(QTDIR)\include\QtScopeGuard;.\QXlsx\header;.\QXsdCode\include;.\Device;.\Device\Plugin\oculus\LibOVR\include;.\Device\PlugIn\oculus\LibOVRKernel\Src;C:\Program Files (x86)\Visual Leak Detector\include;.\Parser;.\Parser\include;.\FileSystem;.\Sound;.\Sound\Fftreal</IncludePath>
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGamepad;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtMultimedia;.\QXlsx\header;.\QXsdCode\include;.\Device;.\Device\Plugin\oculus\LibOVR\include;.\Device\PlugIn\oculus\LibOVRKernel\Src;C:\Program Files (x86)\Visual Leak Detector\include;.\Parser;.\Parser\include;.\FileSystem;.\Sound;.\Sound\Fftreal</IncludePath>
-    </QtMoc>
-    <QtMoc Include="FileSystem\Json_Importer.h">
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGamepad;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtMultimedia;$(QTDIR)\include\QtScopeGuard;.\QXlsx\header;.\QXsdCode\include;.\Device;.\Device\Plugin\oculus\LibOVR\include;.\Device\PlugIn\oculus\LibOVRKernel\Src;C:\Program Files (x86)\Visual Leak Detector\include;.\Parser;.\Parser\include;.\FileSystem;.\Sound;.\Sound\Fftreal</IncludePath>
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGamepad;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtMultimedia;.\QXlsx\header;.\QXsdCode\include;.\Device;.\Device\Plugin\oculus\LibOVR\include;.\Device\PlugIn\oculus\LibOVRKernel\Src;C:\Program Files (x86)\Visual Leak Detector\include;.\Parser;.\Parser\include;.\FileSystem;.\Sound;.\Sound\Fftreal</IncludePath>
-    </QtMoc>
-    <QtMoc Include="FileSystem\Json_Exporter.h">
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGamepad;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtMultimedia;$(QTDIR)\include\QtScopeGuard;.\QXlsx\header;.\QXsdCode\include;.\Device;.\Device\Plugin\oculus\LibOVR\include;.\Device\PlugIn\oculus\LibOVRKernel\Src;C:\Program Files (x86)\Visual Leak Detector\include;.\Parser;.\Parser\include;.\FileSystem;.\Sound;.\Sound\Fftreal</IncludePath>
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGamepad;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtMultimedia;.\QXlsx\header;.\QXsdCode\include;.\Device;.\Device\Plugin\oculus\LibOVR\include;.\Device\PlugIn\oculus\LibOVRKernel\Src;C:\Program Files (x86)\Visual Leak Detector\include;.\Parser;.\Parser\include;.\FileSystem;.\Sound;.\Sound\Fftreal</IncludePath>
-    </QtMoc>
-    <QtMoc Include="FileSystem\WaveToHaptic.h">
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGamepad;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtMultimedia;$(QTDIR)\include\QtScopeGuard;.\QXlsx\header;.\QXsdCode\include;.\Device;.\Device\Plugin\oculus\LibOVR\include;.\Device\PlugIn\oculus\LibOVRKernel\Src;C:\Program Files (x86)\Visual Leak Detector\include;.\Parser;.\Parser\include;.\FileSystem;.\Sound;.\Sound\Fftreal</IncludePath>
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGamepad;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtMultimedia;.\QXlsx\header;.\QXsdCode\include;.\Device;.\Device\Plugin\oculus\LibOVR\include;.\Device\PlugIn\oculus\LibOVRKernel\Src;C:\Program Files (x86)\Visual Leak Detector\include;.\Parser;.\Parser\include;.\FileSystem;.\Sound;.\Sound\Fftreal</IncludePath>
-    </QtMoc>
+    <QtMoc Include="GenDocument.h" />
+    <QtMoc Include="HapticEditorPopupMenu.h" />
+    <QtMoc Include="FileSystem\BVF_Exporter.h" />
+    <QtMoc Include="FileSystem\BVF_Importer.h" />
+    <QtMoc Include="FileSystem\H_Exporter.h" />
+    <QtMoc Include="FileSystem\H_Importer.h" />
+    <QtMoc Include="FileSystem\HFS_Manager.h" />
+    <QtMoc Include="FileSystem\WAVE_Importer.h" />
+    <QtMoc Include="FileSystem\Json_Importer.h" />
+    <QtMoc Include="FileSystem\Json_Exporter.h" />
+    <QtMoc Include="FileSystem\WaveToHaptic.h" />
     <ClInclude Include="GeneratedFiles\ui_HapticEditorSplit.h" />
-    <QtMoc Include="HapticPlotGraphCursor.h">
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGamepad;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtMultimedia;$(QTDIR)\include\QtScopeGuard;.\QXlsx\header;.\QXsdCode\include;.\Device;.\Device\Plugin\oculus\LibOVR\include;.\Device\PlugIn\oculus\LibOVRKernel\Src;C:\Program Files (x86)\Visual Leak Detector\include;.\Parser;.\Parser\include;.\FileSystem;.\Sound;.\Sound\Fftreal</IncludePath>
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGamepad;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtMultimedia;.\QXlsx\header;.\QXsdCode\include;.\Device;.\Device\Plugin\oculus\LibOVR\include;.\Device\PlugIn\oculus\LibOVRKernel\Src;C:\Program Files (x86)\Visual Leak Detector\include;.\Parser;.\Parser\include;.\FileSystem;.\Sound;.\Sound\Fftreal</IncludePath>
-    </QtMoc>
+    <QtMoc Include="HapticPlotGraphCursor.h" />
     <ClInclude Include="MessageHandle.h" />
-    <QtMoc Include="Parser\include\Functions.h">
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGamepad;$(ProjectDir)QXlsx\header;.\Device;.\Device\Plugin\oculus\LibOVR\include;.\Device\PlugIn\oculus\LibOVRKernel\Src;C:\Program Files (x86)\Visual Leak Detector\include;.\QtXsdCode\include</IncludePath>
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;C:\Program Files (x86)\Visual Leak Detector\include</IncludePath>
-    </QtMoc>
-    <QtMoc Include="Parser\include\Parser.h">
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGamepad;$(ProjectDir)QXlsx\header;.\Device;.\Device\Plugin\oculus\LibOVR\include;.\Device\PlugIn\oculus\LibOVRKernel\Src;C:\Program Files (x86)\Visual Leak Detector\include;.\QtXsdCode\include</IncludePath>
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;C:\Program Files (x86)\Visual Leak Detector\include</IncludePath>
-    </QtMoc>
-    <QtMoc Include="Parser\include\Sample.h">
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGamepad;$(ProjectDir)QXlsx\header;.\Device;.\Device\Plugin\oculus\LibOVR\include;.\Device\PlugIn\oculus\LibOVRKernel\Src;C:\Program Files (x86)\Visual Leak Detector\include;.\QtXsdCode\include</IncludePath>
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;C:\Program Files (x86)\Visual Leak Detector\include</IncludePath>
-    </QtMoc>
-    <QtMoc Include="Parser\include\Samples.h">
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGamepad;$(ProjectDir)QXlsx\header;.\Device;.\Device\Plugin\oculus\LibOVR\include;.\Device\PlugIn\oculus\LibOVRKernel\Src;C:\Program Files (x86)\Visual Leak Detector\include;.\QtXsdCode\include</IncludePath>
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;C:\Program Files (x86)\Visual Leak Detector\include</IncludePath>
-    </QtMoc>
-    <QtMoc Include="Parser\include\Schema.h">
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGamepad;$(ProjectDir)QXlsx\header;.\Device;.\Device\Plugin\oculus\LibOVR\include;.\Device\PlugIn\oculus\LibOVRKernel\Src;C:\Program Files (x86)\Visual Leak Detector\include;.\QtXsdCode\include</IncludePath>
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;C:\Program Files (x86)\Visual Leak Detector\include</IncludePath>
-    </QtMoc>
-    <QtMoc Include="Parser\SampleTableParser.h">
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGamepad;$(ProjectDir)QXlsx\header;.\Device;.\Device\Plugin\oculus\LibOVR\include;.\Device\PlugIn\oculus\LibOVRKernel\Src;C:\Program Files (x86)\Visual Leak Detector\include;.\QtXsdCode\include;.\Parser;.\Parser\include</IncludePath>
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;C:\Program Files (x86)\Visual Leak Detector\include</IncludePath>
-    </QtMoc>
-    <QtMoc Include="Parser\TableManager.h">
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGamepad;$(QTDIR)\include\QtXml;.\QXlsx\header;.\QXsdCode\include;.\Device;.\Device\Plugin\oculus\LibOVR\include;.\Device\PlugIn\oculus\LibOVRKernel\Src;C:\Program Files (x86)\Visual Leak Detector\include;.\Parser;.\Parser\include</IncludePath>
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;C:\Program Files (x86)\Visual Leak Detector\include</IncludePath>
-    </QtMoc>
+    <QtMoc Include="Parser\include\Functions.h" />
+    <QtMoc Include="Parser\include\Parser.h" />
+    <QtMoc Include="Parser\include\Sample.h" />
+    <QtMoc Include="Parser\include\Samples.h" />
+    <QtMoc Include="Parser\include\Schema.h" />
+    <QtMoc Include="Parser\SampleTableParser.h" />
+    <QtMoc Include="Parser\TableManager.h" />
     <ClInclude Include="Parser\SampleDataLoader.h" />
-    <QtMoc Include="qcustomplot_TracerExt.h">
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGamepad;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtMultimedia;$(QTDIR)\include\QtScopeGuard;.\QXlsx\header;.\QXsdCode\include;.\Device;.\Device\Plugin\oculus\LibOVR\include;.\Device\PlugIn\oculus\LibOVRKernel\Src;C:\Program Files (x86)\Visual Leak Detector\include;.\Parser;.\Parser\include;.\FileSystem;.\Sound;.\Sound\Fftreal</IncludePath>
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGamepad;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtMultimedia;.\QXlsx\header;.\QXsdCode\include;.\Device;.\Device\Plugin\oculus\LibOVR\include;.\Device\PlugIn\oculus\LibOVRKernel\Src;C:\Program Files (x86)\Visual Leak Detector\include;.\Parser;.\Parser\include;.\FileSystem;.\Sound;.\Sound\Fftreal</IncludePath>
-    </QtMoc>
+    <QtMoc Include="qcustomplot_TracerExt.h" />
     <ClInclude Include="QXsdCode\include\handler.h" />
-    <QtMoc Include="QXsdCode\include\xsdattribute.h">
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGamepad;$(ProjectDir)QXlsx\header;.\Device;.\Device\Plugin\oculus\LibOVR\include;.\Device\PlugIn\oculus\LibOVRKernel\Src;C:\Program Files (x86)\Visual Leak Detector\include;.\QtXsdCode\include</IncludePath>
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;C:\Program Files (x86)\Visual Leak Detector\include</IncludePath>
-    </QtMoc>
-    <QtMoc Include="QXsdCode\include\xsdobject.h">
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGamepad;$(ProjectDir)QXlsx\header;.\Device;.\Device\Plugin\oculus\LibOVR\include;.\Device\PlugIn\oculus\LibOVRKernel\Src;C:\Program Files (x86)\Visual Leak Detector\include;.\QtXsdCode\include</IncludePath>
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;C:\Program Files (x86)\Visual Leak Detector\include</IncludePath>
-    </QtMoc>
+    <QtMoc Include="QXsdCode\include\xsdattribute.h" />
+    <QtMoc Include="QXsdCode\include\xsdobject.h" />
     <ClInclude Include="GeneratedFiles\ui_HapticEditorHud.h" />
     <ClInclude Include="GeneratedFiles\ui_QtHapticMain.h" />
-    <QtMoc Include="QToolButtonWacher.h">
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets</IncludePath>
-      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_CHARTS_LIB;QT_CORE_LIB;QT_GUI_LIB;QT_OPENGL_LIB;QT_WIDGETS_LIB;QT_PRINTSUPPORT_LIB</Define>
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets</IncludePath>
-      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CHARTS_LIB;QT_CORE_LIB;QT_GUI_LIB;QT_OPENGL_LIB;QT_WIDGETS_LIB</Define>
-    </QtMoc>
-    <QtMoc Include="HapticEditorMainToolBar.h">
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets</IncludePath>
-      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_CHARTS_LIB;QT_CORE_LIB;QT_GUI_LIB;QT_OPENGL_LIB;QT_WIDGETS_LIB;QT_PRINTSUPPORT_LIB</Define>
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets</IncludePath>
-      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CHARTS_LIB;QT_CORE_LIB;QT_GUI_LIB;QT_OPENGL_LIB;QT_WIDGETS_LIB</Define>
-    </QtMoc>
-    <QtMoc Include="Sound\waveengine.h">
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGamepad;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtMultimedia;.\QXlsx\header;.\QXsdCode\include;.\Device;.\Device\Plugin\oculus\LibOVR\include;.\Device\PlugIn\oculus\LibOVRKernel\Src;C:\Program Files (x86)\Visual Leak Detector\include;.\Parser;.\Parser\include;.\FileSystem;.\Sound;.\Sound\Fftreal</IncludePath>
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGamepad;$(QTDIR)\include\QtXml;.\QXlsx\header;.\QXsdCode\include;.\Device;.\Device\Plugin\oculus\LibOVR\include;.\Device\PlugIn\oculus\LibOVRKernel\Src;C:\Program Files (x86)\Visual Leak Detector\include;.\Parser;.\Parser\include;.\FileSystem</IncludePath>
-    </QtMoc>
-    <QtMoc Include="Sound\wavebufferreader.h">
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGamepad;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtMultimedia;.\QXlsx\header;.\QXsdCode\include;.\Device;.\Device\Plugin\oculus\LibOVR\include;.\Device\PlugIn\oculus\LibOVRKernel\Src;C:\Program Files (x86)\Visual Leak Detector\include;.\Parser;.\Parser\include;.\FileSystem;.\Sound;.\Sound\Fftreal</IncludePath>
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGamepad;$(QTDIR)\include\QtXml;.\QXlsx\header;.\QXsdCode\include;.\Device;.\Device\Plugin\oculus\LibOVR\include;.\Device\PlugIn\oculus\LibOVRKernel\Src;C:\Program Files (x86)\Visual Leak Detector\include;.\Parser;.\Parser\include;.\FileSystem</IncludePath>
-    </QtMoc>
+    <QtMoc Include="QToolButtonWacher.h" />
+    <QtMoc Include="HapticEditorMainToolBar.h" />
+    <QtMoc Include="Sound\waveengine.h" />
+    <QtMoc Include="Sound\wavebufferreader.h" />
     <ClInclude Include="Sound\Int24.h" />
     <ClInclude Include="Sound\wavfile.h" />
     <ClInclude Include="UndoCommands.h">
@@ -471,18 +329,8 @@
       <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CHARTS_LIB;QT_CORE_LIB;QT_GUI_LIB;QT_OPENGL_LIB;QT_WIDGETS_LIB</Define>
     </ClInclude>
     <ClInclude Include="UndoDataTypes.h" />
-    <QtMoc Include="HapticEditorToolBar.h">
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets</IncludePath>
-      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_CHARTS_LIB;QT_CORE_LIB;QT_GUI_LIB;QT_OPENGL_LIB;QT_WIDGETS_LIB;QT_PRINTSUPPORT_LIB</Define>
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets</IncludePath>
-      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CHARTS_LIB;QT_CORE_LIB;QT_GUI_LIB;QT_OPENGL_LIB;QT_WIDGETS_LIB</Define>
-    </QtMoc>
-    <QtMoc Include="HapticModifFunc.h">
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets</IncludePath>
-      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_CHARTS_LIB;QT_CORE_LIB;QT_GUI_LIB;QT_OPENGL_LIB;QT_WIDGETS_LIB;QT_PRINTSUPPORT_LIB</Define>
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets</IncludePath>
-      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CHARTS_LIB;QT_CORE_LIB;QT_GUI_LIB;QT_OPENGL_LIB;QT_WIDGETS_LIB</Define>
-    </QtMoc>
+    <QtMoc Include="HapticEditorToolBar.h" />
+    <QtMoc Include="HapticModifFunc.h" />
     <ClInclude Include="HapticPlotData.h">
       <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets</IncludePath>
       <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_CHARTS_LIB;QT_CORE_LIB;QT_GUI_LIB;QT_OPENGL_LIB;QT_WIDGETS_LIB;QT_PRINTSUPPORT_LIB</Define>
@@ -492,12 +340,7 @@
     <ClInclude Include="HapticPlotGraph.h" />
     <ClInclude Include="HapticPlotKeyAction.h" />
     <ClInclude Include="singleton.h" />
-    <QtMoc Include="HapticPlotDataSelectAction.h">
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets</IncludePath>
-      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_CHARTS_LIB;QT_CORE_LIB;QT_GUI_LIB;QT_OPENGL_LIB;QT_WIDGETS_LIB;QT_PRINTSUPPORT_LIB</Define>
-      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets</IncludePath>
-      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CHARTS_LIB;QT_CORE_LIB;QT_GUI_LIB;QT_OPENGL_LIB;QT_WIDGETS_LIB</Define>
-    </QtMoc>
+    <QtMoc Include="HapticPlotDataSelectAction.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Device\PlugIn\oculus\LibOVRKernel\Src\Kernel\OVR_NewOverride.inl" />
@@ -510,7 +353,7 @@
   </ImportGroup>
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties MocDir=".\GeneratedFiles\$(ConfigurationName)" UicDir=".\GeneratedFiles" RccDir=".\GeneratedFiles" lupdateOptions="" lupdateOnBuild="0" lreleaseOptions="" Qt5Version_x0020_x64="msvc2017_64_5.12" MocOptions="" />
+      <UserProperties lreleaseOptions="" lupdateOnBuild="0" lupdateOptions="" MocDir=".\GeneratedFiles\$(ConfigurationName)" MocOptions="" Qt5Version_x0020_x64="vvv" RccDir=".\GeneratedFiles" UicDir=".\GeneratedFiles" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

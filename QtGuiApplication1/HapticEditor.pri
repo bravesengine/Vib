@@ -7,33 +7,182 @@
 message("You are running qmake on a generated .pro file. This may not work!")
 
 
-HEADERS += ./UndoCommands.h \
-    ./HapticEditorToolBar.h \
-    ./call_once.h \
-    ./HapticModifFunc.h \
-    ./HapticPlotData.h \
+HEADERS += ./call_once.h \
+    ./MessageHandle.h \
+    ./UndoCommands.h \
+    ./UndoDataTypes.h \
     ./HapticPlotGraph.h \
     ./HapticPlotKeyAction.h \
     ./singleton.h \
+    ./HapticPlotGraphCursor.h \
+    ./HapticModifFunc.h \
+    ./HapticPlotDataSelectAction.h \
+    ./Device/HapticBufferClip.h \
+    ./Device/HapticBufferClip_Oculus.h \
+    ./Device/HapticDeviceCommander.h \
+    ./Device/HT_GlobalTypes.h \
+    ./Device/HapticDevice_Oculus.h \
+    ./Device/HapticDevice_Vive.h \
+    ./Device/HapticDevice_XboxPad.h \
+    ./Device/HapticDeviceManager.h \
+    ./Device/HapticIDevice.h \
+    ./Device/HapticDeviceState.h \
+    ./Device/HapticClipResouce.h \
+    ./Device/HapticDeviceCommand.h \
+    ./Device/PlugIn/oculus/LibOVR/Include/OVR_CAPI.h \
+    ./Device/PlugIn/oculus/LibOVR/Include/OVR_CAPI_Audio.h \
+    ./Device/PlugIn/oculus/LibOVR/Include/OVR_CAPI_D3D.h \
+    ./Device/PlugIn/oculus/LibOVR/Include/OVR_CAPI_GL.h \
+    ./Device/PlugIn/oculus/LibOVR/Include/OVR_CAPI_Keys.h \
+    ./Device/PlugIn/oculus/LibOVR/Include/OVR_CAPI_Vk.h \
+    ./Device/PlugIn/oculus/LibOVR/Include/OVR_ErrorCode.h \
+    ./Device/PlugIn/oculus/LibOVR/Include/OVR_Version.h \
+    ./Device/PlugIn/oculus/LibOVR/Include/Extras/OVR_CAPI_Util.h \
+    ./Device/PlugIn/oculus/LibOVR/Include/Extras/OVR_Math.h \
+    ./Device/PlugIn/oculus/LibOVR/Include/Extras/OVR_StereoProjection.h \
+    ./Device/PlugIn/oculus/LibOVRKernel/Src/GL/CAPI_GLE.h \
+    ./Device/PlugIn/oculus/LibOVRKernel/Src/GL/CAPI_GLE_GL.h \
+    ./Device/PlugIn/oculus/LibOVRKernel/Src/Kernel/OVR_Alg.h \
+    ./Device/PlugIn/oculus/LibOVRKernel/Src/Kernel/OVR_Allocator.h \
+    ./Device/PlugIn/oculus/LibOVRKernel/Src/Kernel/OVR_Array.h \
+    ./Device/PlugIn/oculus/LibOVRKernel/Src/Kernel/OVR_Atomic.h \
+    ./Device/PlugIn/oculus/LibOVRKernel/Src/Kernel/OVR_Callbacks.h \
+    ./Device/PlugIn/oculus/LibOVRKernel/Src/Kernel/OVR_CallbacksInternal.h \
+    ./Device/PlugIn/oculus/LibOVRKernel/Src/Kernel/OVR_Color.h \
+    ./Device/PlugIn/oculus/LibOVRKernel/Src/Kernel/OVR_Compiler.h \
+    ./Device/PlugIn/oculus/LibOVRKernel/Src/Kernel/OVR_ContainerAllocator.h \
+    ./Device/PlugIn/oculus/LibOVRKernel/Src/Kernel/OVR_CRC32.h \
+    ./Device/PlugIn/oculus/LibOVRKernel/Src/Kernel/OVR_DebugHelp.h \
+    ./Device/PlugIn/oculus/LibOVRKernel/Src/Kernel/OVR_Delegates.h \
+    ./Device/PlugIn/oculus/LibOVRKernel/Src/Kernel/OVR_Deque.h \
+    ./Device/PlugIn/oculus/LibOVRKernel/Src/Kernel/OVR_Error.h \
+    ./Device/PlugIn/oculus/LibOVRKernel/Src/Kernel/OVR_File.h \
+    ./Device/PlugIn/oculus/LibOVRKernel/Src/Kernel/OVR_Hash.h \
+    ./Device/PlugIn/oculus/LibOVRKernel/Src/Kernel/OVR_JSON.h \
+    ./Device/PlugIn/oculus/LibOVRKernel/Src/Kernel/OVR_KeyCodes.h \
+    ./Device/PlugIn/oculus/LibOVRKernel/Src/Kernel/OVR_List.h \
+    ./Device/PlugIn/oculus/LibOVRKernel/Src/Kernel/OVR_Lockless.h \
+    ./Device/PlugIn/oculus/LibOVRKernel/Src/Kernel/OVR_Log.h \
+    ./Device/PlugIn/oculus/LibOVRKernel/Src/Kernel/OVR_mach_exc_OSX.h \
+    ./Device/PlugIn/oculus/LibOVRKernel/Src/Kernel/OVR_Nullptr.h \
+    ./Device/PlugIn/oculus/LibOVRKernel/Src/Kernel/OVR_Rand.h \
+    ./Device/PlugIn/oculus/LibOVRKernel/Src/Kernel/OVR_RefCount.h \
+    ./Device/PlugIn/oculus/LibOVRKernel/Src/Kernel/OVR_SharedMemory.h \
+    ./Device/PlugIn/oculus/LibOVRKernel/Src/Kernel/OVR_Std.h \
+    ./Device/PlugIn/oculus/LibOVRKernel/Src/Kernel/OVR_String.h \
+    ./Device/PlugIn/oculus/LibOVRKernel/Src/Kernel/OVR_StringHash.h \
+    ./Device/PlugIn/oculus/LibOVRKernel/Src/Kernel/OVR_SysFile.h \
+    ./Device/PlugIn/oculus/LibOVRKernel/Src/Kernel/OVR_System.h \
+    ./Device/PlugIn/oculus/LibOVRKernel/Src/Kernel/OVR_Threads.h \
+    ./Device/PlugIn/oculus/LibOVRKernel/Src/Kernel/OVR_Timer.h \
+    ./Device/PlugIn/oculus/LibOVRKernel/Src/Kernel/OVR_Types.h \
+    ./Device/PlugIn/oculus/LibOVRKernel/Src/Kernel/OVR_UTF8Util.h \
+    ./Device/PlugIn/oculus/LibOVRKernel/Src/Kernel/OVR_Win32_IncludeWindows.h \
+    ./Device/PlugIn/oculus/LibOVRKernel/Src/Kernel/WindowsAFunctions.h \
+    ./Device/PlugIn/oculus/LibOVRKernel/Src/Tracing/LibOVREvents.h \
+    ./Device/PlugIn/oculus/LibOVRKernel/Src/Tracing/Tracing.h \
+    ./Device/PlugIn/oculus/LibOVRKernel/Src/Util/Util_D3D11_Blitter.h \
+    ./Device/PlugIn/oculus/LibOVRKernel/Src/Util/Util_Direct3D.h \
+    ./Device/PlugIn/oculus/LibOVRKernel/Src/Util/Util_GL_Blitter.h \
+    ./Device/PlugIn/oculus/LibOVRKernel/Src/Util/Util_ImageWindow.h \
+    ./Device/PlugIn/oculus/LibOVRKernel/Src/Util/Util_LongPollThread.h \
+    ./Device/PlugIn/oculus/LibOVRKernel/Src/Util/Util_SystemGUI.h \
+    ./Device/PlugIn/oculus/LibOVRKernel/Src/Util/Util_SystemInfo.h \
+    ./Device/PlugIn/oculus/LibOVRKernel/Src/Util/Util_Watchdog.h \
+    ./Parser/SampleDataLoader.h \
+    ./Parser/SampleTableParser.h \
+    ./Parser/TableManager.h \
+    ./Parser/include/Functions.h \
+    ./Parser/include/Parser.h \
+    ./Parser/include/Sample.h \
+    ./Parser/include/Samples.h \
+    ./Parser/include/Schema.h \
+    C:/Users/lovej/Desktop/lameHelper_25_09_2013/lameHelper.h \
+    ./FileSystem/BVF_Exporter.h \
+    ./FileSystem/BVF_Importer.h \
+    ./FileSystem/H_Exporter.h \
+    ./FileSystem/H_Importer.h \
+    ./FileSystem/HFS_Manager.h \
+    ./FileSystem/WAVE_Importer.h \
+    ./FileSystem/Json_Importer.h \
+    ./FileSystem/Json_Exporter.h \
+    ./FileSystem/WaveToHaptic.h \
+    ./QXsdCode/include/handler.h \
+    ./QXsdCode/include/xsdattribute.h \
+    ./QXsdCode/include/xsdobject.h \
+    ./Sound/Int24.h \
+    ./Sound/wavfile.h \
+    ./Sound/waveengine.h \
+    ./Sound/wavebufferreader.h \
+    ./HapticPlotData.h \
     ./QtHapticMain.h \
     ./qcustomplot.h \
     ./HapticEditorWindowHud.h \
-    ./HapticPlotDataSelectAction.h \
-    ./UndoDataTypes.h \
-    ./QToolButtonWacher.h
-SOURCES += ./HapticEditorToolBar.cpp \
-    ./HapticEditorWindowHud.cpp \
+    ./DeviceSelectHud.h \
+    ./DeviceStateProgressHud.h \
+    ./ComboBoxDelegate.h \
+    ./GenDocument.h \
+    ./HapticEditorPopupMenu.h \
+    ./qcustomplot_TracerExt.h \
+    ./QToolButtonWacher.h \
+    ./HapticEditorMainToolBar.h \
+    ./HapticEditorToolBar.h
+SOURCES += ./HapticPlotGraphCursor.cpp \
     ./HapticModifFunc.cpp \
     ./HapticPlotData.cpp \
     ./HapticPlotDataSelectAction.cpp \
     ./HapticPlotGraph.cpp \
     ./HapticPlotKeyAction.cpp \
-    ./main.cpp \
-    ./qcustomplot.cpp \
-    ./QtHapticMain.cpp \
     ./UndoCommands.cpp \
     ./UndoDataTypes.cpp \
+    ./Device/HapticBufferClip.cpp \
+    ./Device/HapticBufferClip_Oculus.cpp \
+    ./Device/HapticClipResouce.cpp \
+    ./Device/HapticDeviceCommand.cpp \
+    ./Device/HapticDeviceCommander.cpp \
+    ./Device/HapticDeviceState.cpp \
+    ./Device/HapticDeviceManager.cpp \
+    ./Device/HapticDevice_Oculus.cpp \
+    ./Device/HapticDevice_Vive.cpp \
+    ./Device/HapticDevice_XboxPad.cpp \
+    ./Device/HapticIDevice.cpp \
+    ./Parser/SampleDataLoader.cpp \
+    ./Parser/SampleTableParser.cpp \
+    ./Parser/TableManager.cpp \
+    ./Parser/src/Functions.cpp \
+    ./Parser/src/Parser.cpp \
+    ./Parser/src/Sample.cpp \
+    ./Parser/src/Samples.cpp \
+    ./Parser/src/Schema.cpp \
+    C:/Users/lovej/Desktop/lameHelper_25_09_2013/lameHelper.cpp \
+    ./FileSystem/BVF_Exporter.cpp \
+    ./FileSystem/BVF_Importer.cpp \
+    ./FileSystem/HFS_Manager.cpp \
+    ./FileSystem/Json_Exporter.cpp \
+    ./FileSystem/Json_Importer.cpp \
+    ./FileSystem/WaveToHaptic.cpp \
+    ./FileSystem/WAVE_Importer.cpp \
+    ./Sound/wavebufferreader.cpp \
+    ./Sound/waveengine.cpp \
+    ./Sound/wavfile.cpp \
+    ./ComboBoxDelegate.cpp \
+    ./DeviceSelectHud.cpp \
+    ./DeviceStateProgressHud.cpp \
+    ./GenDocument.cpp \
+    ./HapticEditorPopupMenu.cpp \
+    ./HapticEditorMainToolBar.cpp \
+    ./HapticEditorToolBar.cpp \
+    ./HapticEditorWindowHud.cpp \
+    ./main.cpp \
+    ./qcustomplot.cpp \
+    ./qcustomplot_TracerExt.cpp \
+    ./QtHapticMain.cpp \
     ./QToolButtonWacher.cpp
-FORMS += ./HapticEditorHud.ui \
+FORMS += ./Device.ui \
+    ./DeviceStateProgress.ui \
+    ./GenDocument.ui \
+    ./HapticEditorHud.ui \
+    ./HapticEditorSplit.ui \
     ./QtHapticMain.ui
+TRANSLATIONS += ./hapticeditor_ko.ts
 RESOURCES += QtHapticMain.qrc

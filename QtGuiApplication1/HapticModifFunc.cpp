@@ -1,6 +1,5 @@
 #include "HapticModifFunc.h"
 //#include "qcustomplot.h"
-
 #include "HapticPlotGraph.h"
 
 #include "UndoCommands.h"
@@ -18,7 +17,6 @@ bool HaticModifGraph::IsEqualHzPlotData(QList<HzPlotData> v1, QList<HzPlotData> 
 		return false;
 
 	int Size = v1.size();
-
 	for (int i = 0; i < Size; i++)
 	{
 		if (v1[i] != v2[i])

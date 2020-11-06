@@ -15,6 +15,7 @@
 #include "BVF_Importer.h"
 #include "WAVE_Importer.h"
 #include "Json_Importer.h"
+#include "lameHelper.h"
 
 using namespace HT;
 
@@ -128,7 +129,7 @@ bool HFS_Manager::SaveDialog(HapticPlotData* ExportData, QString &outPath)
 
 bool HFS_Manager::LoadDialog(HapticPlotData* ImportData, QString &outPath)
 {
-	QString selfilter = tr("vibrations Files (*.json *.bvf *.wav)");
+	QString selfilter = tr("vibrations Files (*.json *.bvf *.wav *.mp3)");
 //	QString selected_filter = tr("vibrations files(*.json *.bvf *.wav");
 	QString filePath = QFileDialog::getOpenFileName(NULL, tr("Open File"),
 		"/data/", selfilter);// , &selfilter);
@@ -139,8 +140,25 @@ bool HFS_Manager::LoadDialog(HapticPlotData* ImportData, QString &outPath)
 	H_Importer *Importer = NULL;
 	
 	if (suffix == "bvf")  Importer = new BVF_Importer();
- 	 else if (suffix == "wav") Importer = new WAVE_Importer();
-	 else if (suffix == "json") Importer = new Json_Importer();
+	else if (suffix == "wav") Importer = new WAVE_Importer();
+	else if (suffix == "json") Importer = new Json_Importer();
+	else if (suffix == "mp3") 
+	{
+		QDir _dir("./wav");
+		if (_dir.exists())
+			_dir.removeRecursively();
+		if (!_dir.exists())
+			_dir.mkpath(".");
+		lameHelper lhHandle;
+		QByteArray ba1 = filePath.toLocal8Bit();
+		char* c_str1 = ba1.data();
+		QString fileName = "./wav/"+info.baseName()+".wav" ;
+		QByteArray ba2 = fileName.toLocal8Bit();
+		char* c_str2 = ba2.data();
+		lhHandle.decode(c_str1,c_str2);
+		filePath = "./wav/" + info.baseName() + ".wav";
+		Importer = new WAVE_Importer();
+	}
 
 	if (Importer == NULL)
 	{

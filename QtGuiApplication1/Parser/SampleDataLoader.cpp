@@ -1,5 +1,6 @@
 #include "SampleDataLoader.h"
 #include <QtCore>
+
 #include "xlsxdocument.h"
 #include "xlsxchartsheet.h"
 #include "xlsxcellrange.h"

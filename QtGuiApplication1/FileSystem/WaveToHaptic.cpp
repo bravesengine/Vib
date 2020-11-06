@@ -11,7 +11,7 @@ WaveToHaptic::WaveToHaptic()
 	mSampleRate = 0;
 
 	mWaveEngine = new WaveEngine(this);
-
+	
 	ConnectEvent();
 
 }
@@ -50,7 +50,7 @@ bool WaveToHaptic::LoadWaveFile_Dialog()
 
 	bool bRet = false;
 	const QString dir;
-	const QStringList fileNames = QFileDialog::getOpenFileNames(this, tr("Open WAV file"), dir, "*.wav");
+	const QStringList fileNames = QFileDialog::getOpenFileNames(this, tr("Open WAV file"), dir, "*.wav, *.mp3");
 
 	if (fileNames.count())
 		bRet = LoadWaveFile(fileNames.front());

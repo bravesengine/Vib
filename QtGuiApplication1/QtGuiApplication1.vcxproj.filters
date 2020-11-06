@@ -234,6 +234,9 @@
     <ClCompile Include="FileSystem\WaveToHaptic.cpp">
       <Filter>FIleSystem</Filter>
     </ClCompile>
+    <ClCompile Include="FileSystem\lameHelper.cpp">
+      <Filter>FIleSystem</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="HapticPlotDataSelectAction.h">
@@ -628,6 +631,9 @@
     </ClInclude>
     <ClInclude Include="Sound\Int24.h">
       <Filter>3rd\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="FileSystem\lameHelper.h">
+      <Filter>FIleSystem</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
