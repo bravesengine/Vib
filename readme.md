@@ -64,7 +64,8 @@
  
 
 # 커뮤니티
-　 [Git Issue 참고](https://github.com/bravesengine/Vib/issues)
+[Git Issue 참고](https://github.com/bravesengine/Vib/issues)  
+    [Slack](https://braves-hq.slack.com)
 
 # License
  본 프로그램은 GPLv3 라이선스의 보호를 받습니다.  
@@ -122,7 +123,9 @@ This manual for tools will be published with Wiki pages. This tools uses default
    [refer to Wiki page](https://github.com/bravesengine/Vib/wiki)
  
 # Community
-　 [refer to Git Issue](https://github.com/bravesengine/Vib/issues)
+[refer to Git Issue](https://github.com/bravesengine/Vib/issues)    
+[Slack](https://braves-hq.slack.com)
+
 
 # License
  This licese is protected by GPLv3 License.
