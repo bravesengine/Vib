@@ -56,7 +56,8 @@
 
 
 # 홈페이지
-   [Braves 홈페이지](http://www.bravegames.co.kr/)
+   [Braves 홈페이지](http://www.bravegames.co.kr/)   
+   [기술문서 페이지](http://www.bravegames.co.kr/dev/list.html)
   
   
 # 상세 설명
@@ -117,7 +118,8 @@ This manual for tools will be published with Wiki pages. This tools uses default
 
 
 # Homepage
-   [Braves Homepage](http://www.bravegames.co.kr)
+   [Braves Homepage](http://www.bravegames.co.kr)  
+   [Technical document](http://www.bravegames.co.kr/dev/list.html)
 
 # Detailed Description
    [refer to Wiki page](https://github.com/bravesengine/Vib/wiki)
