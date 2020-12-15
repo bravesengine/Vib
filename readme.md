@@ -7,6 +7,7 @@
 
 
 
+
 # VR 햅틱 진동 데이터 개발 툴에 대해
 * 개요  
 　본 프로그램은 현재 오큘리스 리프트 기기 전용으로 제작되고 있습니다.
@@ -56,7 +57,8 @@
 
 
 # 홈페이지
-   [Braves 홈페이지](http://www.bravegames.co.kr/)
+   [Braves 홈페이지](http://www.bravegames.co.kr/)   
+   [기술문서 페이지](http://www.bravegames.co.kr/dev/list.html)
   
   
 # 상세 설명
@@ -70,7 +72,10 @@
 # License
  본 프로그램은 GPLv3 라이선스의 보호를 받습니다.  
     
-    
+      
+      
+        
+        
     
  
    
@@ -117,7 +122,8 @@ This manual for tools will be published with Wiki pages. This tools uses default
 
 
 # Homepage
-   [Braves Homepage](http://www.bravegames.co.kr)
+   [Braves Homepage](http://www.bravegames.co.kr)  
+   [Technical document](http://www.bravegames.co.kr/dev/list.html)
 
 # Detailed Description
    [refer to Wiki page](https://github.com/bravesengine/Vib/wiki)
