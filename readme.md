@@ -1,6 +1,7 @@
  | CodeCI | Package |
  |--------|---------|
-[![Build Status](http://build.bravesgames.com:8080/buildStatus/icon?job=Vib%2FVib_CodeCI)](http://build.bravesgames.com:8080/job/Vib/job/Vib_CodeCI/)|[![Build Status](http://build.bravesgames.com:8080/buildStatus/icon?job=Vib%2FVib_Packaging)](http://build.bravesgames.com:8080/job/Vib/job/Vib_Packaging/)
+[![Build Status](http://build.bravesgames.com:8080/buildStatus/icon?job=Vib%2FVib_CodeCI)](http://dev-build.fishing-on.com:8080/job/Vib/job/Vib_CodeCI/badge/)|[![Build Status](http://build.bravesgames.com:8080/buildStatus/icon?job=Vib%2FVib_Packaging)](http://dev-build.fishing-on.com/Vib/Release/)
+/)
     
     
 
