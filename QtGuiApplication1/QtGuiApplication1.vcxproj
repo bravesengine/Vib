@@ -55,7 +55,7 @@
     <ClCompile>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <PreprocessorDefinitions>UNICODE;_UNICODE;WIN64;SUPERIMPOSE_PROGRESS_ON_WAVEFORM;SPECTRUM_ANALYSER_SEPARATE_THREAD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(QTDIR)\include;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGlobal;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtMultimedia;$(QTDIR)\include\QtGamepad;.;.\lame-master\include;.\GeneratedFiles;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtScopeGuard;.\QXlsx\header;.\QXsdCode\include;.\Device;.\Device\Plugin\oculus\LibOVR\include;.\Device\PlugIn\oculus\LibOVRKernel\Src;C:\Program Files (x86)\Visual Leak Detector\include;.\Parser\;.\Parser\include;.\FileSystem;.\Sound;.\Sound\Fftreal;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(QTDIR)\include;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGlobal;$(QTDIR)\include\QtGamepad;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtMultimedia;.;.\lame-master\include;.\GeneratedFiles;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtScopeGuard;.\QXlsx\header;.\QXsdCode\include;.\Device;.\Device\Plugin\oculus\LibOVR\include;.\Device\PlugIn\oculus\LibOVRKernel\Src;C:\Program Files (x86)\Visual Leak Detector\include;.\Parser\;.\Parser\include;.\FileSystem;.\Sound;.\Sound\Fftreal;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -65,13 +65,13 @@
       <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
       <AdditionalLibraryDirectories>.\lame-master\x64\Debug;$(QTDIR)\lib;$(ProjectDir)QXlsx\lib;$(ProjectDir)Device\Plugin\libs\x64Debug;C:\Program Files (x86)\Visual Leak Detector\lib\Win64;$(ProjectDir)QXsdCode\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>libmpghip-static.lib;libmp3lame-static.lib;libmp3lame.lib;qtmaind.lib;opengl32.lib;glu32.lib;shell32.lib;LibOVR.lib;LibOVRKernel.lib;QT5Gamepad.lib;QXsdCode_d.lib;Qt5Cored.lib;Qt5Guid.lib;Qt5Widgetsd.lib;QXlsx_d.lib;Qt5Xmld.lib;Qt5Scxmld.lib;Qt5Multimediad.lib;Qt5XmlPatternsd.lib;Qt5PrintSupportd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>libmpghip-static.lib;libmp3lame-static.lib;libmp3lame.lib;opengl32.lib;glu32.lib;shell32.lib;LibOVR.lib;LibOVRKernel.lib;QXlsx_d.lib;qtmaind.lib;Qt5Cored.lib;Qt5Xmld.lib;Qt5Multimediad.lib;Qt5Widgetsd.lib;QT5Gamepadd.lib;QXsdCode_d.lib;Qt5Guid.lib;Qt5Scxmld.lib;Qt5XmlPatternsd.lib;Qt5PrintSupportd.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/NODEFAULTLIB:library %(AdditionalOptions)</AdditionalOptions>
     </Link>
     <QtMoc>
       <OutputFile>.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</OutputFile>
       <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
-      <IncludePath>$(QTDIR)\include;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGlobal;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtMultimedia;$(QTDIR)\include\QtGamepad;.;.\lame-master\include;.\GeneratedFiles;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtScopeGuard;.\QXlsx\header;.\QXsdCode\include;.\Device;.\Device\Plugin\oculus\LibOVR\include;.\Device\PlugIn\oculus\LibOVRKernel\Src;C:\Program Files (x86)\Visual Leak Detector\include;.\Parser\;.\Parser\include;.\FileSystem;.\Sound;.\Sound\Fftreal;%(AdditionalIncludeDirectories)</IncludePath>
+      <IncludePath>$(QTDIR)\include;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGlobal;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtMultimedia;$(QTDIR)\include\QtGamepad;.;.\lame-master\include;.\GeneratedFiles;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtScopeGuard;.\QXlsx\header;.\QXsdCode\include;.\Device;.\Device\Plugin\oculus\LibOVR\include;.\Device\PlugIn\oculus\LibOVRKernel\Src;C:\Program Files (x86)\Visual Leak Detector\include;.\Parser;.\Parser\include;.\FileSystem;.\Sound;.\Sound\Fftreal</IncludePath>
       <Define>UNICODE;_UNICODE;WIN64;SUPERIMPOSE_PROGRESS_ON_WAVEFORM;SPECTRUM_ANALYSER_SEPARATE_THREAD;%(PreprocessorDefinitions)</Define>
       <QTDIR>$(QTDIR)</QTDIR>
     </QtMoc>
@@ -93,7 +93,7 @@
     <ClCompile>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <PreprocessorDefinitions>UNICODE;_UNICODE;WIN32;WIN64;QT_NO_DEBUG;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);.\QXlsx\header;.\QXsdCode\include;.\Device;.\Device\Plugin\oculus\LibOVR\include;.\Device\PlugIn\oculus\LibOVRKernel\Src;C:\Program Files (x86)\Visual Leak Detector\include;.\Parser\;.\Parser\include;.\FileSystem;.\Sound;.\Sound\Fftreal;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(QTDIR)\include;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGlobal;$(QTDIR)\include\QtGamepad;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtMultimedia;.;.\lame-master\include;.\GeneratedFiles;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtScopeGuard;.\QXlsx\header;.\QXsdCode\include;.\Device;.\Device\Plugin\oculus\LibOVR\include;.\Device\PlugIn\oculus\LibOVRKernel\Src;C:\Program Files (x86)\Visual Leak Detector\include;.\Parser\;.\Parser\include;.\FileSystem;.\Sound;.\Sound\Fftreal;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
       <Optimization>Disabled</Optimization>
@@ -103,12 +103,12 @@
       <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
       <AdditionalLibraryDirectories>$(QTDIR)\lib;$(ProjectDir)QXlsx\lib;C:\Program Files (x86)\Visual Leak Detector\lib\Win64;$(ProjectDir)Device\Plugin\libs\x64Release;$(ProjectDir)QXsdCode\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>qtmain.lib;opengl32.lib;glu32.lib;QXlsx.lib;LibOVR.lib;LibOVRKernel.lib;QT5Gamepad.lib;QXsdCode.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;qtmain.lib;Qt5Core.lib;Qt5Xml.lib;Qt5Multimedia.lib;Qt5Widgets.lib;QT5Gamepad.lib;LibOVR.lib;LibOVRKernel.lib;QXsdCode.lib;Qt5Guid.lib;Qt5Scxml.lib;Qt5XmlPatterns.lib;Qt5PrintSupport.lib;QXlsx_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <QtMoc>
       <OutputFile>.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</OutputFile>
       <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
-      <IncludePath>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);.\QXlsx\header;.\QXsdCode\include;.\Device;.\Device\Plugin\oculus\LibOVR\include;.\Device\PlugIn\oculus\LibOVRKernel\Src;C:\Program Files (x86)\Visual Leak Detector\include;.\Parser\;.\Parser\include;.\FileSystem;.\Sound;.\Sound\Fftreal;%(AdditionalIncludeDirectories)</IncludePath>
+      <IncludePath>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);.\QXlsx\header;.\QXsdCode\include;.\Device;.\Device\Plugin\oculus\LibOVR\include;.\Device\PlugIn\oculus\LibOVRKernel\Src;C:\Program Files (x86)\Visual Leak Detector\include;.\Parser;.\Parser\include;.\FileSystem;.\Sound;.\Sound\Fftreal</IncludePath>
       <Define>UNICODE;_UNICODE;WIN32;WIN64;QT_NO_DEBUG;NDEBUG;%(PreprocessorDefinitions)</Define>
       <QTDIR>$(QTDIR)</QTDIR>
     </QtMoc>
@@ -344,6 +344,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Device\PlugIn\oculus\LibOVRKernel\Src\Kernel\OVR_NewOverride.inl" />
+    <None Include="hapticeditor_en.ts" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
@@ -353,7 +354,7 @@
   </ImportGroup>
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties lreleaseOptions="" lupdateOnBuild="0" lupdateOptions="" MocDir=".\GeneratedFiles\$(ConfigurationName)" MocOptions="" Qt5Version_x0020_x64="vvv" RccDir=".\GeneratedFiles" UicDir=".\GeneratedFiles" />
+      <UserProperties lreleaseOptions="" lupdateOnBuild="0" lupdateOptions="" MocDir=".\GeneratedFiles\$(ConfigurationName)" MocOptions="" Qt5Version_x0020_x64="5.12.11_msvc2017_64" RccDir=".\GeneratedFiles" UicDir=".\GeneratedFiles" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>
