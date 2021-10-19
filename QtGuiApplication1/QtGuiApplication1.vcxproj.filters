@@ -82,6 +82,11 @@
     <Filter Include="Gui">
       <UniqueIdentifier>{972bb1b4-b32c-4840-b80c-23429b650212}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
+      <Extensions>ts</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="HapticPlotData.cpp">
@@ -639,6 +644,9 @@
   <ItemGroup>
     <None Include="Device\PlugIn\oculus\LibOVRKernel\Src\Kernel\OVR_NewOverride.inl">
       <Filter>Device\Oculus\OVRKernel\Kernel</Filter>
+    </None>
+    <None Include="hapticeditor_en.ts">
+      <Filter>Translation Files</Filter>
     </None>
   </ItemGroup>
 </Project>
