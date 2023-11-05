@@ -1,11 +1,3 @@
- | CodeCI | Package |
- |--------|---------|
-[![Build Status](http://dev-build.fishing-on.com:8080/buildStatus/icon?job=Vib%2FVib_CodeCI)](http://dev-build.fishing-on.com:8080/job/Vib/job/Vib_CodeCI/badge/)|[![Build Status](http://dev-build.fishing-on.com:8080/buildStatus/icon?job=Vib%2FProject+Vib_Packaging)](http://dev-build.fishing-on.com/Vib/Release/)
-    
-    
-
-
-
 
 
 # VR 햅틱 진동 데이터 개발 툴에 대해
@@ -132,7 +124,8 @@ This manual for tools will be published with Wiki pages. This tools uses default
 [refer to Git Issue](https://github.com/bravesengine/Vib/issues)    
 [Slack](https://braves-hq.slack.com)
 
-
 # License
  This licese is protected by GPLv3 License.
+
+
 
